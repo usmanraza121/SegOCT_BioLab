@@ -1,64 +1,80 @@
-# Multimodal Image Fusion for Facial Analysis
+# OCT Image Segmentation: Cornea, Lens, and Nucleus
 
-This repository provides tools and algorithms for **image registration** and **multimodal image fusion**, using RGB and thermal facial images. It is designed for medical applications such as **remote photoplethysmography (rPPG)** and **facial skin anomaly detection**.
+This repository provides a pipeline for precise **annotation** and **segmentation of OCT (Optical Coherence Tomography) images** into three key regions: **cornea**, **lens**, and **nucleus**.  
+It combines a custom annotation method for precise boundary detection with a DeepLabV3+ U-Net model for automated segmentation.  
+The approach addresses challenges such as **low image contrast** and **overlapping anatomical regions**, ensuring accurate delineation of structures.
 
-![Multimodal Image Fusion](images/reg1.png)
+![Annotation comparison](images/anno.png)
 
-## Overview
-This project implements image registration techniques to enable multimodal image fusion of **facial RGB and thermal image** data. It supports medical analysis by combining RGB and thermal imaging modalities and aligning them temporally. This repository implements three methods to register **facial RGB and thermal images** and align them temporally using timestamp differences:
-1. **Enhanced Correlation Coefficient (ECC)**:
-    - Robust alignment for global motion  
-    - Fusion step is non-adaptive
-2. **SimpleITK Registration Framework**
-    - High-precision multimodal image registration
-3. **Deep Learning-based Multimodal Image Fusion**
-    - (In progress)
-   
-## Highlights
-- **Multimodal Image Fusion**: Combines RGB and thermal images using ECC (OpenCV) and SimpleITK for enhanced feature extraction.
-- **Temporal Alignment**: Matches RGB and thermal images across time frames using timestamp-based temporal difference calculations.
-- **Evaluation Metrics**: Includes the **Structural Similarity Index (SSIM)** metric to evaluate the quality of image alignment and fusion.
-- **Medical Applications**: Supports rPPG (e.g., heart rate extraction) and skin anomaly detection in facial image data.
+---
 
+## Annotation Pipeline
 
-## Repository Structure
+### CVAT for Annotation ([CVAT](https://www.cvat.ai/))
+- Initial annotations were generated using CVAT.  
+- Limitations: **low contrast**, **overlapping lens/nucleus regions**, and **imprecise boundaries**.
+
+### Custom Annotation Tool (LabVIEW Frequency Profiling)
+- OCT intensity images were processed in **LabVIEW** to extract **high- and low-frequency vertical profiles**.
+- Vertical profiles were analyzed to detect **boundary regions** between anatomical layers.
+- A **Python script** post-processed the profiles to identify **start and end points** for each segment:
+  - Segments **2 & 3** → **Cornea**  
+  - Segments **4 & 7** → **Lens**  
+  - Segments **5 & 6** → **Nucleus**
+- This method produces **precise and accurate annotations**, outperforming manual CVAT labeling.
+
+![Annotation profiling](images/anno1.png)
+
+---
+
+## Model Training
+A DeepLabV3+ U-Net model was trained on the **custom-annotated dataset** to segment OCT images into cornea, lens, and nucleus.
+
+- **Input:** OCT images  
+- **Output:** Segmentation masks (cornea, lens, nucleus)  
+- **Architecture:** DeepLabV3+ with U-Net backbone for robust feature extraction and boundary prediction  
+- **Data loading:** Custom PyTorch dataloader for preprocessing and training  
+
+To train the model:
+```bash
+python train.py # configure paths, batch size, etc. in train.py
 ```
-├── RGB_thermal_Fusion.ipynb          # RGB-thermal image fusion using ECC (OpenCV) and SimpleITK
-├── time_stamp_matching.ipynb         # Temporal alignment of RGB and thermal images using timestamps
-├── images 
-└── README.md   
+For k-fold cross-validation:
+```bash
+python train_kfold.py 
 ```
 
+## Inference
+Segment new OCT images using the pre-trained model:
+```bash
+python segment_oct.py 
+```
+---
 ## Installation
-To set up the project locally, follow these steps:
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/usmanraza121/Multimodal-Image-Fusion.git
-    cd Multimodal-Image-Fusion
-    
-    ```
-
-2. **Create a virtual environment**:
+1. **Clone the Repository**:
    ```bash
-   conda create -n mmfusion
-   conda activate mmfusion
+   git clone https://github.com/yourusername/SegOCT_BioLab.git
+   cd SegOCT_BioLab
    ```
 
-3. **Install dependencies**:
-   Install required packages:
+2. **Set Up Virtual Environment**:
    ```bash
-   pip install numpy opencv-python scikit-image SimpleITK matplotlib
+   conda create -n octseg 
+   conda activate octseg
    ```
 
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+---
+   ## Results
+- **Visual Results**: Examples below show segmentation across different subjects.
 
-## Image Registration
-![Image Registration Example](images/fuse1.png)
-
-## Temporal Matching
-![Time-stamp mismatching example](images/diff.png)
-
-![Time-stamp matching example](images/temp1.png)
-
-![Time-stamp matching example](images/temp2.png)
+| Subject | Segmentation Result |
+|---------|--------------------|
+| Subject 1 | ![Result 1](images/img1.jpg) |
+| Subject 2 | ![Result 2](images/img2.jpg) |
+| Subject 3 | ![Result 3](images/img3.jpg) |
