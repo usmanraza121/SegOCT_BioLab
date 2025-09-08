@@ -1,0 +1,39 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+
+
+# Ignore large datasets
+data/
+*.npy
+*.npz
+*.h5
+*.mat
+*.nii
+*.nii.gz
+
+# Ignore model weights
+*.pth
+*.pt
+*.ckpt
+
+# Ignore experiment results and logs
+results/
+logs/
+runs/
+
+# Ignore OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
