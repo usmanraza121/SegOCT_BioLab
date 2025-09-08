@@ -13,7 +13,7 @@ env/
 
 
 # Ignore large datasets
-data/
+
 *.npy
 *.npz
 *.h5
@@ -27,9 +27,7 @@ data/
 *.ckpt
 
 # Ignore experiment results and logs
-results/
-logs/
-runs/
+
 
 # Ignore OS / IDE files
 .DS_Store

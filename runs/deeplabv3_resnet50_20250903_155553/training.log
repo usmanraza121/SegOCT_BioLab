@@ -1,0 +1,186 @@
+2025-09-03 15:55:53,858 - INFO - Run directory: runs/deeplabv3_resnet50_20250903_155553
+2025-09-03 15:55:53,858 - INFO - Using device: cuda
+2025-09-03 15:55:54,298 - INFO - Training samples: 79, Validation samples: 20
+2025-09-03 15:55:55,759 - INFO - Epoch 1 | Batch 1/10 | Loss: 1.2948 | Avg Loss: 1.2948
+2025-09-03 15:55:56,074 - INFO - Epoch 1 | Batch 2/10 | Loss: 1.2007 | Avg Loss: 1.2478
+2025-09-03 15:55:56,390 - INFO - Epoch 1 | Batch 3/10 | Loss: 1.1570 | Avg Loss: 1.2175
+2025-09-03 15:55:56,707 - INFO - Epoch 1 | Batch 4/10 | Loss: 1.1024 | Avg Loss: 1.1887
+2025-09-03 15:55:57,020 - INFO - Epoch 1 | Batch 5/10 | Loss: 1.0659 | Avg Loss: 1.1642
+2025-09-03 15:55:57,332 - INFO - Epoch 1 | Batch 6/10 | Loss: 0.9969 | Avg Loss: 1.1363
+2025-09-03 15:55:57,654 - INFO - Epoch 1 | Batch 7/10 | Loss: 0.9708 | Avg Loss: 1.1127
+2025-09-03 15:55:57,975 - INFO - Epoch 1 | Batch 8/10 | Loss: 0.9250 | Avg Loss: 1.0892
+2025-09-03 15:55:58,292 - INFO - Epoch 1 | Batch 9/10 | Loss: 0.8868 | Avg Loss: 1.0667
+2025-09-03 15:55:58,577 - INFO - Epoch 1 | Batch 10/10 | Loss: 0.8435 | Avg Loss: 1.0338
+2025-09-03 15:55:59,292 - INFO - Epoch 1 completed. Loss: 1.0469, Time: 5.0s
+2025-09-03 15:59:19,914 - INFO - Validation | Loss: 0.9037, mIoU: 0.4775, IoUs: [0.86945035 0.41584582 0.53866972 0.08615744]
+2025-09-03 15:59:20,069 - INFO - Saved best model at epoch 1 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 15:59:21,057 - INFO - Epoch 2 | Batch 1/10 | Loss: 0.8011 | Avg Loss: 0.8011
+2025-09-03 15:59:21,372 - INFO - Epoch 2 | Batch 2/10 | Loss: 0.7659 | Avg Loss: 0.7835
+2025-09-03 15:59:21,698 - INFO - Epoch 2 | Batch 3/10 | Loss: 0.7350 | Avg Loss: 0.7673
+2025-09-03 15:59:22,020 - INFO - Epoch 2 | Batch 4/10 | Loss: 0.6967 | Avg Loss: 0.7497
+2025-09-03 15:59:22,335 - INFO - Epoch 2 | Batch 5/10 | Loss: 0.6622 | Avg Loss: 0.7322
+2025-09-03 15:59:22,652 - INFO - Epoch 2 | Batch 6/10 | Loss: 0.6495 | Avg Loss: 0.7184
+2025-09-03 15:59:22,972 - INFO - Epoch 2 | Batch 7/10 | Loss: 0.6014 | Avg Loss: 0.7017
+2025-09-03 15:59:23,291 - INFO - Epoch 2 | Batch 8/10 | Loss: 0.5854 | Avg Loss: 0.6871
+2025-09-03 15:59:23,610 - INFO - Epoch 2 | Batch 9/10 | Loss: 0.5736 | Avg Loss: 0.6745
+2025-09-03 15:59:23,891 - INFO - Epoch 2 | Batch 10/10 | Loss: 0.5601 | Avg Loss: 0.6561
+2025-09-03 15:59:24,591 - INFO - Epoch 2 completed. Loss: 0.6644, Time: 4.5s
+2025-09-03 16:02:46,079 - INFO - Validation | Loss: 0.6719, mIoU: 0.6279, IoUs: [0.93815588 0.60990906 0.60995411 0.35349542]
+2025-09-03 16:02:46,251 - INFO - Saved best model at epoch 2 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:02:47,210 - INFO - Epoch 3 | Batch 1/10 | Loss: 0.5331 | Avg Loss: 0.5331
+2025-09-03 16:02:47,539 - INFO - Epoch 3 | Batch 2/10 | Loss: 0.5295 | Avg Loss: 0.5313
+2025-09-03 16:02:47,864 - INFO - Epoch 3 | Batch 3/10 | Loss: 0.4976 | Avg Loss: 0.5201
+2025-09-03 16:02:48,183 - INFO - Epoch 3 | Batch 4/10 | Loss: 0.4833 | Avg Loss: 0.5109
+2025-09-03 16:02:48,495 - INFO - Epoch 3 | Batch 5/10 | Loss: 0.4778 | Avg Loss: 0.5043
+2025-09-03 16:02:48,810 - INFO - Epoch 3 | Batch 6/10 | Loss: 0.4436 | Avg Loss: 0.4942
+2025-09-03 16:02:49,129 - INFO - Epoch 3 | Batch 7/10 | Loss: 0.4653 | Avg Loss: 0.4900
+2025-09-03 16:02:49,446 - INFO - Epoch 3 | Batch 8/10 | Loss: 0.4423 | Avg Loss: 0.4841
+2025-09-03 16:02:49,763 - INFO - Epoch 3 | Batch 9/10 | Loss: 0.4615 | Avg Loss: 0.4816
+2025-09-03 16:02:50,039 - INFO - Epoch 3 | Batch 10/10 | Loss: 0.4364 | Avg Loss: 0.4716
+2025-09-03 16:02:50,762 - INFO - Epoch 3 completed. Loss: 0.4776, Time: 4.5s
+2025-09-03 16:06:11,366 - INFO - Validation | Loss: 0.5111, mIoU: 0.6817, IoUs: [0.96089549 0.72389154 0.64531608 0.39674295]
+2025-09-03 16:06:11,530 - INFO - Saved best model at epoch 3 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:06:12,536 - INFO - Epoch 4 | Batch 1/10 | Loss: 0.4174 | Avg Loss: 0.4174
+2025-09-03 16:06:12,871 - INFO - Epoch 4 | Batch 2/10 | Loss: 0.4181 | Avg Loss: 0.4178
+2025-09-03 16:06:13,199 - INFO - Epoch 4 | Batch 3/10 | Loss: 0.4086 | Avg Loss: 0.4147
+2025-09-03 16:06:13,519 - INFO - Epoch 4 | Batch 4/10 | Loss: 0.4085 | Avg Loss: 0.4131
+2025-09-03 16:06:13,834 - INFO - Epoch 4 | Batch 5/10 | Loss: 0.3861 | Avg Loss: 0.4077
+2025-09-03 16:06:14,151 - INFO - Epoch 4 | Batch 6/10 | Loss: 0.3810 | Avg Loss: 0.4033
+2025-09-03 16:06:14,472 - INFO - Epoch 4 | Batch 7/10 | Loss: 0.3880 | Avg Loss: 0.4011
+2025-09-03 16:06:14,790 - INFO - Epoch 4 | Batch 8/10 | Loss: 0.3889 | Avg Loss: 0.3996
+2025-09-03 16:06:15,106 - INFO - Epoch 4 | Batch 9/10 | Loss: 0.3730 | Avg Loss: 0.3966
+2025-09-03 16:06:15,382 - INFO - Epoch 4 | Batch 10/10 | Loss: 0.3666 | Avg Loss: 0.3890
+2025-09-03 16:06:16,133 - INFO - Epoch 4 completed. Loss: 0.3940, Time: 4.6s
+2025-09-03 16:09:36,199 - INFO - Validation | Loss: 0.4403, mIoU: 0.7017, IoUs: [0.97418181 0.79161493 0.60548764 0.43568926]
+2025-09-03 16:09:36,369 - INFO - Saved best model at epoch 4 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:09:37,342 - INFO - Epoch 5 | Batch 1/10 | Loss: 0.3509 | Avg Loss: 0.3509
+2025-09-03 16:09:37,674 - INFO - Epoch 5 | Batch 2/10 | Loss: 0.3527 | Avg Loss: 0.3518
+2025-09-03 16:09:38,060 - INFO - Epoch 5 | Batch 3/10 | Loss: 0.3330 | Avg Loss: 0.3455
+2025-09-03 16:09:38,383 - INFO - Epoch 5 | Batch 4/10 | Loss: 0.3532 | Avg Loss: 0.3474
+2025-09-03 16:09:38,742 - INFO - Epoch 5 | Batch 5/10 | Loss: 0.3315 | Avg Loss: 0.3442
+2025-09-03 16:09:39,105 - INFO - Epoch 5 | Batch 6/10 | Loss: 0.3758 | Avg Loss: 0.3495
+2025-09-03 16:09:39,456 - INFO - Epoch 5 | Batch 7/10 | Loss: 0.3460 | Avg Loss: 0.3490
+2025-09-03 16:09:39,829 - INFO - Epoch 5 | Batch 8/10 | Loss: 0.3163 | Avg Loss: 0.3449
+2025-09-03 16:09:40,143 - INFO - Epoch 5 | Batch 9/10 | Loss: 0.3047 | Avg Loss: 0.3404
+2025-09-03 16:09:40,471 - INFO - Epoch 5 | Batch 10/10 | Loss: 0.3192 | Avg Loss: 0.3343
+2025-09-03 16:09:41,182 - INFO - Epoch 5 completed. Loss: 0.3386, Time: 4.8s
+2025-09-03 16:13:03,442 - INFO - Validation | Loss: 0.3621, mIoU: 0.7400, IoUs: [0.98557211 0.85568544 0.76380547 0.35475449]
+2025-09-03 16:13:03,609 - INFO - Saved best model at epoch 5 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:13:04,557 - INFO - Epoch 6 | Batch 1/10 | Loss: 0.3174 | Avg Loss: 0.3174
+2025-09-03 16:13:04,870 - INFO - Epoch 6 | Batch 2/10 | Loss: 0.3139 | Avg Loss: 0.3157
+2025-09-03 16:13:05,213 - INFO - Epoch 6 | Batch 3/10 | Loss: 0.3109 | Avg Loss: 0.3141
+2025-09-03 16:13:05,545 - INFO - Epoch 6 | Batch 4/10 | Loss: 0.3211 | Avg Loss: 0.3158
+2025-09-03 16:13:05,855 - INFO - Epoch 6 | Batch 5/10 | Loss: 0.3068 | Avg Loss: 0.3140
+2025-09-03 16:13:06,165 - INFO - Epoch 6 | Batch 6/10 | Loss: 0.3132 | Avg Loss: 0.3139
+2025-09-03 16:13:06,478 - INFO - Epoch 6 | Batch 7/10 | Loss: 0.3134 | Avg Loss: 0.3138
+2025-09-03 16:13:06,789 - INFO - Epoch 6 | Batch 8/10 | Loss: 0.2980 | Avg Loss: 0.3118
+2025-09-03 16:13:07,099 - INFO - Epoch 6 | Batch 9/10 | Loss: 0.3119 | Avg Loss: 0.3118
+2025-09-03 16:13:07,370 - INFO - Epoch 6 | Batch 10/10 | Loss: 0.3099 | Avg Loss: 0.3078
+2025-09-03 16:13:08,085 - INFO - Epoch 6 completed. Loss: 0.3117, Time: 4.5s
+2025-09-03 16:16:27,961 - INFO - Validation | Loss: 0.3408, mIoU: 0.7529, IoUs: [0.9862864  0.87122931 0.75726699 0.39687774]
+2025-09-03 16:16:28,129 - INFO - Saved best model at epoch 6 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:16:29,071 - INFO - Epoch 7 | Batch 1/10 | Loss: 0.3139 | Avg Loss: 0.3139
+2025-09-03 16:16:29,407 - INFO - Epoch 7 | Batch 2/10 | Loss: 0.3152 | Avg Loss: 0.3146
+2025-09-03 16:16:29,730 - INFO - Epoch 7 | Batch 3/10 | Loss: 0.2934 | Avg Loss: 0.3075
+2025-09-03 16:16:30,075 - INFO - Epoch 7 | Batch 4/10 | Loss: 0.3123 | Avg Loss: 0.3087
+2025-09-03 16:16:30,383 - INFO - Epoch 7 | Batch 5/10 | Loss: 0.2958 | Avg Loss: 0.3061
+2025-09-03 16:16:30,694 - INFO - Epoch 7 | Batch 6/10 | Loss: 0.3081 | Avg Loss: 0.3065
+2025-09-03 16:16:31,008 - INFO - Epoch 7 | Batch 7/10 | Loss: 0.2969 | Avg Loss: 0.3051
+2025-09-03 16:16:31,317 - INFO - Epoch 7 | Batch 8/10 | Loss: 0.2907 | Avg Loss: 0.3033
+2025-09-03 16:16:31,626 - INFO - Epoch 7 | Batch 9/10 | Loss: 0.3069 | Avg Loss: 0.3037
+2025-09-03 16:16:31,905 - INFO - Epoch 7 | Batch 10/10 | Loss: 0.3099 | Avg Loss: 0.3004
+2025-09-03 16:16:32,609 - INFO - Epoch 7 completed. Loss: 0.3042, Time: 4.5s
+2025-09-03 16:19:57,222 - INFO - Validation | Loss: 0.3291, mIoU: 0.7549, IoUs: [0.98562362 0.86714208 0.74409794 0.42254521]
+2025-09-03 16:19:57,409 - INFO - Saved best model at epoch 7 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:19:58,442 - INFO - Epoch 8 | Batch 1/10 | Loss: 0.3040 | Avg Loss: 0.3040
+2025-09-03 16:19:58,774 - INFO - Epoch 8 | Batch 2/10 | Loss: 0.3127 | Avg Loss: 0.3083
+2025-09-03 16:19:59,097 - INFO - Epoch 8 | Batch 3/10 | Loss: 0.2971 | Avg Loss: 0.3046
+2025-09-03 16:19:59,424 - INFO - Epoch 8 | Batch 4/10 | Loss: 0.3143 | Avg Loss: 0.3070
+2025-09-03 16:19:59,747 - INFO - Epoch 8 | Batch 5/10 | Loss: 0.2993 | Avg Loss: 0.3055
+2025-09-03 16:20:00,064 - INFO - Epoch 8 | Batch 6/10 | Loss: 0.2931 | Avg Loss: 0.3034
+2025-09-03 16:20:00,380 - INFO - Epoch 8 | Batch 7/10 | Loss: 0.2882 | Avg Loss: 0.3012
+2025-09-03 16:20:00,700 - INFO - Epoch 8 | Batch 8/10 | Loss: 0.2890 | Avg Loss: 0.2997
+2025-09-03 16:20:01,022 - INFO - Epoch 8 | Batch 9/10 | Loss: 0.3116 | Avg Loss: 0.3010
+2025-09-03 16:20:01,302 - INFO - Epoch 8 | Batch 10/10 | Loss: 0.2942 | Avg Loss: 0.2967
+2025-09-03 16:20:02,010 - INFO - Epoch 8 completed. Loss: 0.3004, Time: 4.6s
+2025-09-03 16:23:24,642 - INFO - Validation | Loss: 0.3313, mIoU: 0.7526, IoUs: [0.98501229 0.85792192 0.72376924 0.44380377]
+2025-09-03 16:23:25,627 - INFO - Epoch 9 | Batch 1/10 | Loss: 0.3050 | Avg Loss: 0.3050
+2025-09-03 16:23:25,948 - INFO - Epoch 9 | Batch 2/10 | Loss: 0.2846 | Avg Loss: 0.2948
+2025-09-03 16:23:26,275 - INFO - Epoch 9 | Batch 3/10 | Loss: 0.2931 | Avg Loss: 0.2942
+2025-09-03 16:23:26,593 - INFO - Epoch 9 | Batch 4/10 | Loss: 0.2954 | Avg Loss: 0.2945
+2025-09-03 16:23:26,910 - INFO - Epoch 9 | Batch 5/10 | Loss: 0.2955 | Avg Loss: 0.2947
+2025-09-03 16:23:27,229 - INFO - Epoch 9 | Batch 6/10 | Loss: 0.3061 | Avg Loss: 0.2966
+2025-09-03 16:23:27,548 - INFO - Epoch 9 | Batch 7/10 | Loss: 0.2862 | Avg Loss: 0.2951
+2025-09-03 16:23:27,866 - INFO - Epoch 9 | Batch 8/10 | Loss: 0.2938 | Avg Loss: 0.2950
+2025-09-03 16:23:28,188 - INFO - Epoch 9 | Batch 9/10 | Loss: 0.2864 | Avg Loss: 0.2940
+2025-09-03 16:23:28,463 - INFO - Epoch 9 | Batch 10/10 | Loss: 0.2934 | Avg Loss: 0.2903
+2025-09-03 16:23:29,177 - INFO - Epoch 9 completed. Loss: 0.2940, Time: 4.5s
+2025-09-03 16:26:51,411 - INFO - Validation | Loss: 0.3303, mIoU: 0.7442, IoUs: [0.98487037 0.85559752 0.71707501 0.41910251]
+2025-09-03 16:26:52,456 - INFO - Epoch 10 | Batch 1/10 | Loss: 0.2811 | Avg Loss: 0.2811
+2025-09-03 16:26:52,777 - INFO - Epoch 10 | Batch 2/10 | Loss: 0.3090 | Avg Loss: 0.2950
+2025-09-03 16:26:53,102 - INFO - Epoch 10 | Batch 3/10 | Loss: 0.3089 | Avg Loss: 0.2997
+2025-09-03 16:26:53,424 - INFO - Epoch 10 | Batch 4/10 | Loss: 0.2847 | Avg Loss: 0.2959
+2025-09-03 16:26:53,742 - INFO - Epoch 10 | Batch 5/10 | Loss: 0.2957 | Avg Loss: 0.2959
+2025-09-03 16:26:54,058 - INFO - Epoch 10 | Batch 6/10 | Loss: 0.2943 | Avg Loss: 0.2956
+2025-09-03 16:26:54,378 - INFO - Epoch 10 | Batch 7/10 | Loss: 0.2893 | Avg Loss: 0.2947
+2025-09-03 16:26:54,699 - INFO - Epoch 10 | Batch 8/10 | Loss: 0.2972 | Avg Loss: 0.2950
+2025-09-03 16:26:55,020 - INFO - Epoch 10 | Batch 9/10 | Loss: 0.3014 | Avg Loss: 0.2957
+2025-09-03 16:26:55,296 - INFO - Epoch 10 | Batch 10/10 | Loss: 0.2854 | Avg Loss: 0.2911
+2025-09-03 16:26:56,005 - INFO - Epoch 10 completed. Loss: 0.2948, Time: 4.6s
+2025-09-03 16:30:16,876 - INFO - Validation | Loss: 0.3269, mIoU: 0.7416, IoUs: [0.98489611 0.85726852 0.72259136 0.40154992]
+2025-09-03 16:30:17,267 - INFO - Saved periodic checkpoint at epoch 10 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_epoch_10.pth
+2025-09-03 16:30:17,431 - INFO - Saved best model at epoch 10 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:30:18,444 - INFO - Epoch 11 | Batch 1/10 | Loss: 0.2913 | Avg Loss: 0.2913
+2025-09-03 16:30:18,777 - INFO - Epoch 11 | Batch 2/10 | Loss: 0.2828 | Avg Loss: 0.2870
+2025-09-03 16:30:19,101 - INFO - Epoch 11 | Batch 3/10 | Loss: 0.2773 | Avg Loss: 0.2838
+2025-09-03 16:30:19,422 - INFO - Epoch 11 | Batch 4/10 | Loss: 0.2949 | Avg Loss: 0.2866
+2025-09-03 16:30:19,737 - INFO - Epoch 11 | Batch 5/10 | Loss: 0.2803 | Avg Loss: 0.2853
+2025-09-03 16:30:20,054 - INFO - Epoch 11 | Batch 6/10 | Loss: 0.2984 | Avg Loss: 0.2875
+2025-09-03 16:30:20,364 - INFO - Epoch 11 | Batch 7/10 | Loss: 0.2892 | Avg Loss: 0.2877
+2025-09-03 16:30:20,680 - INFO - Epoch 11 | Batch 8/10 | Loss: 0.2908 | Avg Loss: 0.2881
+2025-09-03 16:30:20,996 - INFO - Epoch 11 | Batch 9/10 | Loss: 0.3082 | Avg Loss: 0.2904
+2025-09-03 16:30:21,274 - INFO - Epoch 11 | Batch 10/10 | Loss: 0.2917 | Avg Loss: 0.2868
+2025-09-03 16:30:21,976 - INFO - Epoch 11 completed. Loss: 0.2905, Time: 4.5s
+2025-09-03 16:33:41,600 - INFO - Validation | Loss: 0.3285, mIoU: 0.7421, IoUs: [0.98514138 0.86254199 0.72160106 0.39897976]
+2025-09-03 16:33:42,613 - INFO - Epoch 12 | Batch 1/10 | Loss: 0.2842 | Avg Loss: 0.2842
+2025-09-03 16:33:42,942 - INFO - Epoch 12 | Batch 2/10 | Loss: 0.2932 | Avg Loss: 0.2887
+2025-09-03 16:33:43,264 - INFO - Epoch 12 | Batch 3/10 | Loss: 0.2855 | Avg Loss: 0.2876
+2025-09-03 16:33:43,585 - INFO - Epoch 12 | Batch 4/10 | Loss: 0.2847 | Avg Loss: 0.2869
+2025-09-03 16:33:43,898 - INFO - Epoch 12 | Batch 5/10 | Loss: 0.2993 | Avg Loss: 0.2894
+2025-09-03 16:33:44,214 - INFO - Epoch 12 | Batch 6/10 | Loss: 0.3077 | Avg Loss: 0.2924
+2025-09-03 16:33:44,531 - INFO - Epoch 12 | Batch 7/10 | Loss: 0.2817 | Avg Loss: 0.2909
+2025-09-03 16:33:44,848 - INFO - Epoch 12 | Batch 8/10 | Loss: 0.2839 | Avg Loss: 0.2900
+2025-09-03 16:33:45,167 - INFO - Epoch 12 | Batch 9/10 | Loss: 0.2886 | Avg Loss: 0.2899
+2025-09-03 16:33:45,445 - INFO - Epoch 12 | Batch 10/10 | Loss: 0.2938 | Avg Loss: 0.2866
+2025-09-03 16:33:46,196 - INFO - Epoch 12 completed. Loss: 0.2902, Time: 4.6s
+2025-09-03 16:37:07,056 - INFO - Validation | Loss: 0.3266, mIoU: 0.7419, IoUs: [0.98544316 0.86539102 0.72797205 0.38878322]
+2025-09-03 16:37:07,219 - INFO - Saved best model at epoch 12 to runs/deeplabv3_resnet50_20250903_155553/checkpoints/deeplabv3_resnet50_best.pth
+2025-09-03 16:37:08,180 - INFO - Epoch 13 | Batch 1/10 | Loss: 0.3003 | Avg Loss: 0.3003
+2025-09-03 16:37:08,511 - INFO - Epoch 13 | Batch 2/10 | Loss: 0.2767 | Avg Loss: 0.2885
+2025-09-03 16:37:08,827 - INFO - Epoch 13 | Batch 3/10 | Loss: 0.3007 | Avg Loss: 0.2926
+2025-09-03 16:37:09,136 - INFO - Epoch 13 | Batch 4/10 | Loss: 0.2922 | Avg Loss: 0.2925
+2025-09-03 16:37:09,449 - INFO - Epoch 13 | Batch 5/10 | Loss: 0.2855 | Avg Loss: 0.2911
+2025-09-03 16:37:09,760 - INFO - Epoch 13 | Batch 6/10 | Loss: 0.2833 | Avg Loss: 0.2898
+2025-09-03 16:37:10,070 - INFO - Epoch 13 | Batch 7/10 | Loss: 0.2864 | Avg Loss: 0.2893
+2025-09-03 16:37:10,380 - INFO - Epoch 13 | Batch 8/10 | Loss: 0.2829 | Avg Loss: 0.2885
+2025-09-03 16:37:10,694 - INFO - Epoch 13 | Batch 9/10 | Loss: 0.2930 | Avg Loss: 0.2890
+2025-09-03 16:37:10,966 - INFO - Epoch 13 | Batch 10/10 | Loss: 0.2912 | Avg Loss: 0.2856
+2025-09-03 16:37:11,695 - INFO - Epoch 13 completed. Loss: 0.2892, Time: 4.5s
+2025-09-03 16:40:32,047 - INFO - Validation | Loss: 0.3267, mIoU: 0.7451, IoUs: [0.98571876 0.86868711 0.72211075 0.40369035]
+2025-09-03 16:40:32,992 - INFO - Epoch 14 | Batch 1/10 | Loss: 0.2869 | Avg Loss: 0.2869
+2025-09-03 16:40:33,308 - INFO - Epoch 14 | Batch 2/10 | Loss: 0.2796 | Avg Loss: 0.2832
+2025-09-03 16:40:33,637 - INFO - Epoch 14 | Batch 3/10 | Loss: 0.2837 | Avg Loss: 0.2834
+2025-09-03 16:40:33,958 - INFO - Epoch 14 | Batch 4/10 | Loss: 0.2890 | Avg Loss: 0.2848
+2025-09-03 16:40:34,268 - INFO - Epoch 14 | Batch 5/10 | Loss: 0.2778 | Avg Loss: 0.2834
+2025-09-03 16:40:34,579 - INFO - Epoch 14 | Batch 6/10 | Loss: 0.3008 | Avg Loss: 0.2863
+2025-09-03 16:40:34,890 - INFO - Epoch 14 | Batch 7/10 | Loss: 0.2858 | Avg Loss: 0.2862
+2025-09-03 16:40:35,201 - INFO - Epoch 14 | Batch 8/10 | Loss: 0.2923 | Avg Loss: 0.2870
+2025-09-03 16:40:35,510 - INFO - Epoch 14 | Batch 9/10 | Loss: 0.2979 | Avg Loss: 0.2882
+2025-09-03 16:40:35,782 - INFO - Epoch 14 | Batch 10/10 | Loss: 0.2840 | Avg Loss: 0.2842
+2025-09-03 16:40:36,523 - INFO - Epoch 14 completed. Loss: 0.2878, Time: 4.5s
+2025-09-03 16:43:56,252 - INFO - Validation | Loss: 0.3272, mIoU: 0.7465, IoUs: [0.98572177 0.86916039 0.72016021 0.41103832]
+2025-09-03 16:43:56,253 - INFO - Early stopping triggered after 5 epochs with no improvement.
+2025-09-03 16:43:56,254 - INFO - Training completed
+2025-09-03 16:43:56,254 - INFO - Average Validation Loss: 0.4183 ± 0.1654
+2025-09-03 16:43:56,254 - INFO - Average Validation mIoU: 0.7107 ± 0.0732
+2025-09-03 16:43:56,254 - INFO - Average Per-class IoU: Class 0: 0.9712, Class 1: 0.7980, Class 2: 0.6943, Class 3: 0.3795

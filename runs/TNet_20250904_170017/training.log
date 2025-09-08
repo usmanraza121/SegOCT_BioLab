@@ -1,0 +1,134 @@
+2025-09-04 17:00:17,595 - INFO - Run directory: runs/TNet_20250904_170017
+2025-09-04 17:00:17,595 - INFO - Using device: cuda
+2025-09-04 17:00:17,824 - INFO - Training samples: 79, Validation samples: 20
+2025-09-04 17:00:25,859 - INFO - Epoch 1 | Batch 1/10 | Loss: 1.3969 | Avg Loss: 1.3969
+2025-09-04 17:00:26,044 - INFO - Epoch 1 | Batch 2/10 | Loss: 1.2889 | Avg Loss: 1.3429
+2025-09-04 17:00:26,225 - INFO - Epoch 1 | Batch 3/10 | Loss: 1.2381 | Avg Loss: 1.3080
+2025-09-04 17:00:26,407 - INFO - Epoch 1 | Batch 4/10 | Loss: 1.1780 | Avg Loss: 1.2755
+2025-09-04 17:00:26,586 - INFO - Epoch 1 | Batch 5/10 | Loss: 1.1383 | Avg Loss: 1.2480
+2025-09-04 17:00:26,745 - INFO - Epoch 1 | Batch 6/10 | Loss: 1.1128 | Avg Loss: 1.2255
+2025-09-04 17:00:26,903 - INFO - Epoch 1 | Batch 7/10 | Loss: 1.0970 | Avg Loss: 1.2071
+2025-09-04 17:00:27,066 - INFO - Epoch 1 | Batch 8/10 | Loss: 1.0660 | Avg Loss: 1.1895
+2025-09-04 17:00:27,231 - INFO - Epoch 1 | Batch 9/10 | Loss: 1.0428 | Avg Loss: 1.1732
+2025-09-04 17:00:34,028 - INFO - Epoch 1 | Batch 10/10 | Loss: 1.0372 | Avg Loss: 1.1466
+2025-09-04 17:00:34,715 - INFO - Epoch 1 completed. Loss: 1.1611, Time: 16.9s
+2025-09-04 17:03:56,661 - INFO - Validation | Loss: 1.2327, mIoU: 0.4687, IoUs: [0.79050783 0.42169948 0.31067247 0.35202406]
+2025-09-04 17:03:56,774 - INFO - Saved best model at epoch 1 to runs/TNet_20250904_170017/checkpoints/TNet_best.pth
+2025-09-04 17:03:57,586 - INFO - Epoch 2 | Batch 1/10 | Loss: 1.0093 | Avg Loss: 1.0093
+2025-09-04 17:03:57,924 - INFO - Epoch 2 | Batch 2/10 | Loss: 1.0140 | Avg Loss: 1.0117
+2025-09-04 17:03:58,266 - INFO - Epoch 2 | Batch 3/10 | Loss: 0.9997 | Avg Loss: 1.0077
+2025-09-04 17:03:58,575 - INFO - Epoch 2 | Batch 4/10 | Loss: 0.9807 | Avg Loss: 1.0009
+2025-09-04 17:03:58,731 - INFO - Epoch 2 | Batch 5/10 | Loss: 0.9641 | Avg Loss: 0.9936
+2025-09-04 17:03:58,893 - INFO - Epoch 2 | Batch 6/10 | Loss: 0.9652 | Avg Loss: 0.9888
+2025-09-04 17:03:59,055 - INFO - Epoch 2 | Batch 7/10 | Loss: 0.9449 | Avg Loss: 0.9826
+2025-09-04 17:03:59,218 - INFO - Epoch 2 | Batch 8/10 | Loss: 0.9399 | Avg Loss: 0.9772
+2025-09-04 17:03:59,382 - INFO - Epoch 2 | Batch 9/10 | Loss: 0.9213 | Avg Loss: 0.9710
+2025-09-04 17:03:59,519 - INFO - Epoch 2 | Batch 10/10 | Loss: 0.9074 | Avg Loss: 0.9533
+2025-09-04 17:04:00,283 - INFO - Epoch 2 completed. Loss: 0.9654, Time: 3.5s
+2025-09-04 17:07:21,792 - INFO - Validation | Loss: 1.0750, mIoU: 0.5630, IoUs: [0.92239071 0.47212222 0.53778763 0.31980662]
+2025-09-04 17:07:21,912 - INFO - Saved best model at epoch 2 to runs/TNet_20250904_170017/checkpoints/TNet_best.pth
+2025-09-04 17:07:22,729 - INFO - Epoch 3 | Batch 1/10 | Loss: 0.9166 | Avg Loss: 0.9166
+2025-09-04 17:07:23,072 - INFO - Epoch 3 | Batch 2/10 | Loss: 0.9051 | Avg Loss: 0.9108
+2025-09-04 17:07:23,393 - INFO - Epoch 3 | Batch 3/10 | Loss: 0.8700 | Avg Loss: 0.8972
+2025-09-04 17:07:23,707 - INFO - Epoch 3 | Batch 4/10 | Loss: 0.8827 | Avg Loss: 0.8936
+2025-09-04 17:07:23,869 - INFO - Epoch 3 | Batch 5/10 | Loss: 0.8647 | Avg Loss: 0.8878
+2025-09-04 17:07:24,031 - INFO - Epoch 3 | Batch 6/10 | Loss: 0.8468 | Avg Loss: 0.8810
+2025-09-04 17:07:24,195 - INFO - Epoch 3 | Batch 7/10 | Loss: 0.8544 | Avg Loss: 0.8772
+2025-09-04 17:07:24,358 - INFO - Epoch 3 | Batch 8/10 | Loss: 0.8377 | Avg Loss: 0.8722
+2025-09-04 17:07:24,520 - INFO - Epoch 3 | Batch 9/10 | Loss: 0.8319 | Avg Loss: 0.8678
+2025-09-04 17:07:24,658 - INFO - Epoch 3 | Batch 10/10 | Loss: 0.8310 | Avg Loss: 0.8537
+2025-09-04 17:07:25,431 - INFO - Epoch 3 completed. Loss: 0.8645, Time: 3.5s
+2025-09-04 17:10:46,094 - INFO - Validation | Loss: 0.9929, mIoU: 0.5959, IoUs: [0.93557866 0.49223676 0.55081542 0.40498848]
+2025-09-04 17:10:46,216 - INFO - Saved best model at epoch 3 to runs/TNet_20250904_170017/checkpoints/TNet_best.pth
+2025-09-04 17:10:47,030 - INFO - Epoch 4 | Batch 1/10 | Loss: 0.8349 | Avg Loss: 0.8349
+2025-09-04 17:10:47,366 - INFO - Epoch 4 | Batch 2/10 | Loss: 0.8172 | Avg Loss: 0.8260
+2025-09-04 17:10:47,701 - INFO - Epoch 4 | Batch 3/10 | Loss: 0.8124 | Avg Loss: 0.8215
+2025-09-04 17:10:48,020 - INFO - Epoch 4 | Batch 4/10 | Loss: 0.8110 | Avg Loss: 0.8189
+2025-09-04 17:10:48,188 - INFO - Epoch 4 | Batch 5/10 | Loss: 0.8002 | Avg Loss: 0.8151
+2025-09-04 17:10:48,356 - INFO - Epoch 4 | Batch 6/10 | Loss: 0.7883 | Avg Loss: 0.8107
+2025-09-04 17:10:48,517 - INFO - Epoch 4 | Batch 7/10 | Loss: 0.7826 | Avg Loss: 0.8067
+2025-09-04 17:10:48,679 - INFO - Epoch 4 | Batch 8/10 | Loss: 0.7759 | Avg Loss: 0.8028
+2025-09-04 17:10:48,840 - INFO - Epoch 4 | Batch 9/10 | Loss: 0.7745 | Avg Loss: 0.7997
+2025-09-04 17:10:48,979 - INFO - Epoch 4 | Batch 10/10 | Loss: 0.7659 | Avg Loss: 0.7867
+2025-09-04 17:10:49,734 - INFO - Epoch 4 completed. Loss: 0.7967, Time: 3.5s
+2025-09-04 17:14:10,451 - INFO - Validation | Loss: 0.9734, mIoU: 0.5727, IoUs: [0.93596419 0.53141638 0.59301693 0.23041767]
+2025-09-04 17:14:10,579 - INFO - Saved best model at epoch 4 to runs/TNet_20250904_170017/checkpoints/TNet_best.pth
+2025-09-04 17:14:11,413 - INFO - Epoch 5 | Batch 1/10 | Loss: 0.7561 | Avg Loss: 0.7561
+2025-09-04 17:14:11,757 - INFO - Epoch 5 | Batch 2/10 | Loss: 0.7500 | Avg Loss: 0.7530
+2025-09-04 17:14:12,074 - INFO - Epoch 5 | Batch 3/10 | Loss: 0.7510 | Avg Loss: 0.7523
+2025-09-04 17:14:12,395 - INFO - Epoch 5 | Batch 4/10 | Loss: 0.7675 | Avg Loss: 0.7561
+2025-09-04 17:14:12,555 - INFO - Epoch 5 | Batch 5/10 | Loss: 0.7547 | Avg Loss: 0.7558
+2025-09-04 17:14:12,718 - INFO - Epoch 5 | Batch 6/10 | Loss: 0.7570 | Avg Loss: 0.7560
+2025-09-04 17:14:12,884 - INFO - Epoch 5 | Batch 7/10 | Loss: 0.7469 | Avg Loss: 0.7547
+2025-09-04 17:14:13,045 - INFO - Epoch 5 | Batch 8/10 | Loss: 0.7411 | Avg Loss: 0.7530
+2025-09-04 17:14:13,207 - INFO - Epoch 5 | Batch 9/10 | Loss: 0.7426 | Avg Loss: 0.7519
+2025-09-04 17:14:13,347 - INFO - Epoch 5 | Batch 10/10 | Loss: 0.7085 | Avg Loss: 0.7387
+2025-09-04 17:14:14,109 - INFO - Epoch 5 completed. Loss: 0.7480, Time: 3.5s
+2025-09-04 17:17:35,619 - INFO - Validation | Loss: 0.9715, mIoU: 0.5604, IoUs: [0.93568662 0.5638316  0.61429082 0.1276019 ]
+2025-09-04 17:17:35,740 - INFO - Saved best model at epoch 5 to runs/TNet_20250904_170017/checkpoints/TNet_best.pth
+2025-09-04 17:17:36,555 - INFO - Epoch 6 | Batch 1/10 | Loss: 0.7247 | Avg Loss: 0.7247
+2025-09-04 17:17:36,899 - INFO - Epoch 6 | Batch 2/10 | Loss: 0.7201 | Avg Loss: 0.7224
+2025-09-04 17:17:37,238 - INFO - Epoch 6 | Batch 3/10 | Loss: 0.7176 | Avg Loss: 0.7208
+2025-09-04 17:17:37,556 - INFO - Epoch 6 | Batch 4/10 | Loss: 0.7075 | Avg Loss: 0.7175
+2025-09-04 17:17:37,717 - INFO - Epoch 6 | Batch 5/10 | Loss: 0.7340 | Avg Loss: 0.7208
+2025-09-04 17:17:37,877 - INFO - Epoch 6 | Batch 6/10 | Loss: 0.7064 | Avg Loss: 0.7184
+2025-09-04 17:17:38,038 - INFO - Epoch 6 | Batch 7/10 | Loss: 0.7191 | Avg Loss: 0.7185
+2025-09-04 17:17:38,200 - INFO - Epoch 6 | Batch 8/10 | Loss: 0.7173 | Avg Loss: 0.7183
+2025-09-04 17:17:38,364 - INFO - Epoch 6 | Batch 9/10 | Loss: 0.7167 | Avg Loss: 0.7181
+2025-09-04 17:17:38,507 - INFO - Epoch 6 | Batch 10/10 | Loss: 0.7163 | Avg Loss: 0.7090
+2025-09-04 17:17:39,260 - INFO - Epoch 6 completed. Loss: 0.7180, Time: 3.5s
+2025-09-04 17:21:00,053 - INFO - Validation | Loss: 0.9776, mIoU: 0.5503, IoUs: [0.93580976 0.5959348  0.61504899 0.05445695]
+2025-09-04 17:21:00,866 - INFO - Epoch 7 | Batch 1/10 | Loss: 0.7186 | Avg Loss: 0.7186
+2025-09-04 17:21:01,197 - INFO - Epoch 7 | Batch 2/10 | Loss: 0.7176 | Avg Loss: 0.7181
+2025-09-04 17:21:01,538 - INFO - Epoch 7 | Batch 3/10 | Loss: 0.7162 | Avg Loss: 0.7175
+2025-09-04 17:21:01,860 - INFO - Epoch 7 | Batch 4/10 | Loss: 0.7033 | Avg Loss: 0.7140
+2025-09-04 17:21:02,021 - INFO - Epoch 7 | Batch 5/10 | Loss: 0.7223 | Avg Loss: 0.7156
+2025-09-04 17:21:02,183 - INFO - Epoch 7 | Batch 6/10 | Loss: 0.7308 | Avg Loss: 0.7181
+2025-09-04 17:21:02,344 - INFO - Epoch 7 | Batch 7/10 | Loss: 0.7121 | Avg Loss: 0.7173
+2025-09-04 17:21:02,507 - INFO - Epoch 7 | Batch 8/10 | Loss: 0.7137 | Avg Loss: 0.7168
+2025-09-04 17:21:02,669 - INFO - Epoch 7 | Batch 9/10 | Loss: 0.6995 | Avg Loss: 0.7149
+2025-09-04 17:21:02,809 - INFO - Epoch 7 | Batch 10/10 | Loss: 0.7206 | Avg Loss: 0.7065
+2025-09-04 17:21:03,568 - INFO - Epoch 7 completed. Loss: 0.7154, Time: 3.5s
+2025-09-04 17:24:24,681 - INFO - Validation | Loss: 0.9810, mIoU: 0.5486, IoUs: [0.93710967 0.60813804 0.62467391 0.02458303]
+2025-09-04 17:24:25,500 - INFO - Epoch 8 | Batch 1/10 | Loss: 0.7066 | Avg Loss: 0.7066
+2025-09-04 17:24:25,826 - INFO - Epoch 8 | Batch 2/10 | Loss: 0.7226 | Avg Loss: 0.7146
+2025-09-04 17:24:26,154 - INFO - Epoch 8 | Batch 3/10 | Loss: 0.7014 | Avg Loss: 0.7102
+2025-09-04 17:24:26,478 - INFO - Epoch 8 | Batch 4/10 | Loss: 0.7069 | Avg Loss: 0.7094
+2025-09-04 17:24:26,641 - INFO - Epoch 8 | Batch 5/10 | Loss: 0.7188 | Avg Loss: 0.7113
+2025-09-04 17:24:26,802 - INFO - Epoch 8 | Batch 6/10 | Loss: 0.7029 | Avg Loss: 0.7099
+2025-09-04 17:24:26,958 - INFO - Epoch 8 | Batch 7/10 | Loss: 0.7169 | Avg Loss: 0.7109
+2025-09-04 17:24:27,121 - INFO - Epoch 8 | Batch 8/10 | Loss: 0.7039 | Avg Loss: 0.7100
+2025-09-04 17:24:27,283 - INFO - Epoch 8 | Batch 9/10 | Loss: 0.6999 | Avg Loss: 0.7089
+2025-09-04 17:24:27,424 - INFO - Epoch 8 | Batch 10/10 | Loss: 0.7191 | Avg Loss: 0.7009
+2025-09-04 17:24:28,194 - INFO - Epoch 8 completed. Loss: 0.7098, Time: 3.5s
+2025-09-04 17:27:48,647 - INFO - Validation | Loss: 0.9847, mIoU: 0.5521, IoUs: [0.93817192 0.61276776 0.632007   0.02542034]
+2025-09-04 17:27:49,478 - INFO - Epoch 9 | Batch 1/10 | Loss: 0.7113 | Avg Loss: 0.7113
+2025-09-04 17:27:49,825 - INFO - Epoch 9 | Batch 2/10 | Loss: 0.7110 | Avg Loss: 0.7112
+2025-09-04 17:27:50,139 - INFO - Epoch 9 | Batch 3/10 | Loss: 0.7064 | Avg Loss: 0.7096
+2025-09-04 17:27:50,465 - INFO - Epoch 9 | Batch 4/10 | Loss: 0.7006 | Avg Loss: 0.7073
+2025-09-04 17:27:50,636 - INFO - Epoch 9 | Batch 5/10 | Loss: 0.7049 | Avg Loss: 0.7069
+2025-09-04 17:27:50,801 - INFO - Epoch 9 | Batch 6/10 | Loss: 0.6979 | Avg Loss: 0.7054
+2025-09-04 17:27:50,969 - INFO - Epoch 9 | Batch 7/10 | Loss: 0.7019 | Avg Loss: 0.7049
+2025-09-04 17:27:51,131 - INFO - Epoch 9 | Batch 8/10 | Loss: 0.7063 | Avg Loss: 0.7051
+2025-09-04 17:27:51,284 - INFO - Epoch 9 | Batch 9/10 | Loss: 0.7010 | Avg Loss: 0.7046
+2025-09-04 17:27:51,423 - INFO - Epoch 9 | Batch 10/10 | Loss: 0.7083 | Avg Loss: 0.6961
+2025-09-04 17:27:52,176 - INFO - Epoch 9 completed. Loss: 0.7049, Time: 3.5s
+2025-09-04 17:31:12,767 - INFO - Validation | Loss: 0.9850, mIoU: 0.5537, IoUs: [0.93930372 0.61800332 0.64100589 0.01630667]
+2025-09-04 17:31:13,583 - INFO - Epoch 10 | Batch 1/10 | Loss: 0.7014 | Avg Loss: 0.7014
+2025-09-04 17:31:13,931 - INFO - Epoch 10 | Batch 2/10 | Loss: 0.6878 | Avg Loss: 0.6946
+2025-09-04 17:31:14,261 - INFO - Epoch 10 | Batch 3/10 | Loss: 0.7238 | Avg Loss: 0.7043
+2025-09-04 17:31:14,594 - INFO - Epoch 10 | Batch 4/10 | Loss: 0.7069 | Avg Loss: 0.7050
+2025-09-04 17:31:14,750 - INFO - Epoch 10 | Batch 5/10 | Loss: 0.7026 | Avg Loss: 0.7045
+2025-09-04 17:31:14,907 - INFO - Epoch 10 | Batch 6/10 | Loss: 0.7018 | Avg Loss: 0.7041
+2025-09-04 17:31:15,069 - INFO - Epoch 10 | Batch 7/10 | Loss: 0.7088 | Avg Loss: 0.7047
+2025-09-04 17:31:15,228 - INFO - Epoch 10 | Batch 8/10 | Loss: 0.6934 | Avg Loss: 0.7033
+2025-09-04 17:31:15,391 - INFO - Epoch 10 | Batch 9/10 | Loss: 0.6974 | Avg Loss: 0.7027
+2025-09-04 17:31:15,535 - INFO - Epoch 10 | Batch 10/10 | Loss: 0.7171 | Avg Loss: 0.6952
+2025-09-04 17:31:16,294 - INFO - Epoch 10 completed. Loss: 0.7040, Time: 3.5s
+2025-09-04 17:34:37,401 - INFO - Validation | Loss: 0.9864, mIoU: 0.5575, IoUs: [0.940701   0.62144287 0.64734833 0.02052136]
+2025-09-04 17:34:37,693 - INFO - Saved periodic checkpoint at epoch 10 to runs/TNet_20250904_170017/checkpoints/TNet_epoch_10.pth
+2025-09-04 17:34:37,694 - INFO - Early stopping triggered after 5 epochs with no improvement.
+2025-09-04 17:34:37,694 - INFO - Training completed
+2025-09-04 17:34:37,694 - INFO - Average Validation Loss: 1.0160 ± 0.0776
+2025-09-04 17:34:37,694 - INFO - Average Validation mIoU: 0.5523 ± 0.0309
+2025-09-04 17:34:37,694 - INFO - Average Per-class IoU: Class 0: 0.9211, Class 1: 0.5538, Class 2: 0.5767, Class 3: 0.1576
