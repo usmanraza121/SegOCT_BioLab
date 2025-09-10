@@ -12,6 +12,113 @@ from torch.nn import functional as F
 from torch.nn import Conv2d, Parameter, Softmax
 from typing import Optional
 
+
+class DACBlock(nn.Module):
+    def __init__(self, in_channels):
+        super(DACBlock, self).__init__()
+        
+        # First branch: simple 3x3 conv (rate=1)
+        self.branch1 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1)
+        
+        # Second branch: 3x3 conv (rate=3) -> 1x1 conv
+        self.branch2_1 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3)
+        self.branch2_2 = nn.Conv2d(in_channels, in_channels, kernel_size=1)
+        
+        # Third branch: 3x3 conv (rate=1) -> 3x3 conv (rate=3) -> 1x1 conv
+        self.branch3_1 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1)
+        self.branch3_2 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3)
+        self.branch3_3 = nn.Conv2d(in_channels, in_channels, kernel_size=1)
+        
+        # Fourth branch: 3x3 conv (rate=1) -> 3x3 conv (rate=3) -> 3x3 conv (rate=5) -> 1x1 conv
+        self.branch4_1 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1)
+        self.branch4_2 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3)
+        self.branch4_3 = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=5, dilation=5)
+        self.branch4_4 = nn.Conv2d(in_channels, in_channels, kernel_size=1)
+
+        self.relu = nn.ReLU(inplace=True)
+
+    def forward(self, x):
+        # Branch outputs
+        b1 = self.relu(self.branch1(x))
+
+        b2 = self.relu(self.branch2_1(x))
+        b2 = self.relu(self.branch2_2(b2))
+
+        b3 = self.relu(self.branch3_1(x))
+        b3 = self.relu(self.branch3_2(b3))
+        b3 = self.relu(self.branch3_3(b3))
+
+        b4 = self.relu(self.branch4_1(x))
+        b4 = self.relu(self.branch4_2(b4))
+        b4 = self.relu(self.branch4_3(b4))
+        b4 = self.relu(self.branch4_4(b4))
+
+        # Sum all paths + original feature map
+        out = x + b1 + b2 + b3 + b4
+        return out
+
+
+class DACBlock2(nn.Module):
+    def __init__(self, in_channels):
+        super(DACBlock2, self).__init__()
+        
+        # Branch 1: 3x3 conv (rate=1)
+        self.branch1 = nn.Sequential(
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True)
+        )
+        
+        # Branch 2: 3x3 (rate=3) -> 1x1
+        self.branch2 = nn.Sequential(
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True)
+        )
+        
+        # Branch 3: 3x3 (rate=1) -> 3x3 (rate=3) -> 1x1
+        self.branch3 = nn.Sequential(
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True)
+        )
+        
+        # Branch 4: 3x3 (rate=1) -> 3x3 (rate=3) -> 3x3 (rate=5) -> 1x1
+        self.branch4 = nn.Sequential(
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, dilation=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=3, dilation=3),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=5, dilation=5),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels, in_channels, kernel_size=1),
+            nn.BatchNorm2d(in_channels),
+            nn.ReLU(inplace=True)
+        )
+    
+    def forward(self, x):
+        out1 = self.branch1(x)
+        out2 = self.branch2(x)
+        out3 = self.branch3(x)
+        out4 = self.branch4(x)
+        
+        # Sum of all branches + original input
+        out = x + out1 + out2 + out3 + out4
+        return out
+
+
 class UAFM(nn.Module):
     """
     Unified Attention Fusion Module, which uses mean and max values across the spatial dimensions.
@@ -792,6 +899,7 @@ class ParallelDilatedConv(nn.Module):
         self.relu6 = nn.ELU(inplace=True)
         self.relu7 = nn.ELU(inplace=True)
         self.relu8 = nn.ELU(inplace=True)
+        self.fuseconv = nn.Conv2d(inplanes, planes, kernel_size=1, stride=1, padding=0)
 
     def forward(self, x):
         out1 = self.dilated_conv_1(x)
@@ -821,6 +929,7 @@ class ParallelDilatedConv(nn.Module):
         out8 = self.relu8(out8)
         # out = torch.cat((out1, out2, out3, out4),1)
         out = out1 + out2 + out3 + out4 + out5 + out6 + out7 + out8 + out33 + out44
+        out = self.fuseconv(out) # possible option to fuse features or SE module
         return out
 """#LEDNet: A Lightweight Encoder-Decoder Network for Real-Time Semantic Segmentation"""
 #=============================================================================================
@@ -859,7 +968,8 @@ class ASPP(nn.Module): # deeplab
         conv2 = self.conv2(x)
         conv3 = self.conv3(x)
         conv4 = self.conv4(x)
-        conv5 = F.upsample(self.conv5(F.adaptive_avg_pool2d(x, 1)), size=x.size()[2:], mode='bilinear')
+        # conv5 = F.upsample(self.conv5(F.adaptive_avg_pool2d(x, 1)), size=x.size()[2:], mode='bilinear')
+        conv5 = F.interpolate(self.conv5(F.adaptive_avg_pool2d(x, 1)), size=x.size()[2:], mode='bilinear')
         return self.fuse(torch.cat((conv1, conv2, conv3,conv4, conv5), 1))
 
 ###CVPR2019 AFNet: Attentive Feedback Network for Boundary-aware Salient Object Detection

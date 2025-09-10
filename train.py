@@ -16,6 +16,7 @@ import logging
 import datetime
 from lib.models.model_zoo.t_net import tnet
 from lib.models.model_zoo.ResNet50UNet import ResNet50UNet
+from lib.losses import CombinedLoss
 # -----------------------------
 # 1. Logging and Run Folder
 # -----------------------------
@@ -37,9 +38,9 @@ def parse_args():
     parser.add_argument('--name', type=str, default="DeepLabV3_ResNet50", help="Model name")
     parser.add_argument('--data_root', type=str, default="/media/be-light/Data/PG_Gdansk/Torun_secondment/Experiments/dataset/cityscapes", help="Dataset path")
     parser.add_argument('--num_classes', type=int, default=4, help="Number of classes")
-    parser.add_argument('--crop_size', type=int, default=512, help="Crop size for images")
-    parser.add_argument('--batch_size', type=int, default=8, help="Training batch size")
-    parser.add_argument('--val_batch_size', type=int, default=4, help="Validation batch size")
+    parser.add_argument('--crop_size', type=int, default=256, help="Crop size for images")
+    parser.add_argument('--batch_size', type=int, default=2, help="Training batch size")
+    parser.add_argument('--val_batch_size', type=int, default=2, help="Validation batch size")
     parser.add_argument('--num_epochs', type=int, default=25, help="Number of epochs")
     parser.add_argument('--lr', type=float, default=1e-4, help="Learning rate")
     parser.add_argument('--log_dir', type=str, default="runs", help="Base directory for run logs")
@@ -80,9 +81,9 @@ def initialize_model(num_classes, device, resume_path=None):
 # 5. DataLoaders
 # -----------------------------
 def initialize_dataloaders(data_root, crop_size, batch_size, val_batch_size):
-    train_dataset = OCTSegDataset(root_dir=data_root, split="train", crop_size=crop_size)
-    val_dataset = OCTSegDataset(root_dir=data_root, split="val", crop_size=crop_size)
-    
+    train_dataset = OCTSegDataset(root_dir=data_root, split="train", crop_size=(crop_size, crop_size))
+    val_dataset = OCTSegDataset(root_dir=data_root, split="val", crop_size=(crop_size, crop_size))
+
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_dataset, batch_size=val_batch_size, shuffle=False, num_workers=4, pin_memory=True)
     
@@ -103,6 +104,10 @@ def train_epoch(model, train_loader, criterion, optimizer, scaler, device, epoch
         with autocast(device_type=device.type):
             out_dict = model(images)
             outputs = out_dict['out'] if isinstance(out_dict, dict) else out_dict
+            # print("Pred shape:", outputs.shape)   # [B, C, H, W]
+            # print("Target shape:", targets.shape, "dtype:", targets.dtype, 
+            #     "min:", targets.min().item(), "max:", targets.max().item())
+
             loss = criterion(outputs, targets)
         
         scaler.scale(loss).backward()
@@ -193,11 +198,15 @@ def main():
                 f"Training {model.name} Model using device: {device}\n"
                 f"Run directory: {run_dir}\n"
                 f"Configuration:\n{json.dumps(vars(args), indent=4)}"
+                f"using class weights: {[1.0, 1.0, 1.0, 3.0]} and gamma: {3.0}\n"
                 )
 
 
     train_loader, val_loader = initialize_dataloaders(args.data_root, args.crop_size, args.batch_size, args.val_batch_size)
-    criterion = nn.CrossEntropyLoss(ignore_index=255, reduction='mean')
+    class_weights = torch.tensor([1.0, 1.0, 1.0, 3.0]).to(device)
+    # criterion = nn.CrossEntropyLoss(ignore_index=255, reduction='mean')
+    criterion = CombinedLoss(num_classes=args.num_classes, lambda_dice=1.0, lambda_focal=1.0, alpha=0.25, gamma=2.0,class_weights=class_weights)
+
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
     scaler = GradScaler()

@@ -3,12 +3,19 @@ from torch.nn.modules.activation import PReLU
 from torch.nn.modules.batchnorm import BatchNorm2d
 import torch.nn as nn
 import torch.nn.functional as F
-from torchsummary import summary
-from .modules import*
-# from modules import*
 import torchvision.models as models
-from .encoders import get_encoder
-from .UAFM import*
+
+try:
+    from torchsummary import summary
+    from .modules import*
+    from .encoders import get_encoder
+    from .UAFM import*
+except ImportError:
+    from modules import*
+    from encoders import get_encoder
+    from UAFM import*
+
+
 # class conv(nn.Module):
 #     def __init__(self, in_channels, out_channels, kernel_size, stride=1, dilation=1, groups=1, padding='same', bias=False, bn=True, relu=False):
 #         super(conv, self).__init__()
@@ -186,7 +193,7 @@ class tnet(nn.Module):
         # ============================MobileNet Encoder==================================
         #self.feature = mobilenet_v2()
 
-        #self.aspp = ASPP(320,320)
+        self.aspp = ASPP(320,320)
         self.pfcu = PFCU(320)
         self.trans = AIM(iC_list=(32, 24, 40, 112, 320), oC_list=(32, 24, 40, 112, 320))
         #self.uacap5 = UACA(320,320)
@@ -213,11 +220,11 @@ class tnet(nn.Module):
         H, W = input.size(2), input.size(3)
         # -----------------------------------------------
         p1, p2, p3, p4, p5 = self.encoder(input)[-5:]
-        # print('pp1', p1.shape)
-        # print('pp2', p2.shape)
-        # print('pp3', p3.shape)
-        # print('pp4', p4.shape)
-        # print('pp5', p5.shape)
+        print('pp1', p1.shape)
+        print('pp2', p2.shape)
+        print('pp3', p3.shape)
+        print('pp4', p4.shape)
+        print('pp5', p5.shape)
         # p5 = self.pfcu(p5)
         p1, p2, p3, p4, p5 = self.trans(p1, p2, p3, p4, p5)
         # print('p1', p1.shape)

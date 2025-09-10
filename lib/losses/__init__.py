@@ -1,3 +1,3 @@
-# from .segmentation_losses import DiceLoss, FocalLoss  # example
+from .loss import CombinedLoss
 
-# __all__ = ['DiceLoss', 'FocalLoss']
+__all__ = ['CombinedLoss']
