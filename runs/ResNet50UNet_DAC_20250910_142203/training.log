@@ -1,0 +1,293 @@
+2025-09-10 14:22:03,559 - INFO - Training ResNet50UNet_DAC Model using device: cuda
+Run directory: runs/ResNet50UNet_DAC_20250910_142203
+Configuration:
+{
+    "name": "ResNet50UNet_DAC",
+    "data_root": "/media/be-light/Data/PG_Gdansk/Torun_secondment/Experiments/dataset/cityscapes",
+    "num_classes": 4,
+    "crop_size": 256,
+    "batch_size": 8,
+    "val_batch_size": 4,
+    "num_epochs": 25,
+    "lr": 0.0001,
+    "log_dir": "runs",
+    "resume": null,
+    "early_stop_patience": 5
+}using class weights: [1.0, 1.0, 1.0, 3.0] and gamma: 3.0
+
+2025-09-10 14:22:03,560 - INFO - Training samples: 79, Validation samples: 20
+2025-09-10 14:22:05,009 - INFO - Epoch 1 | Batch 1/10 | Loss: 2.3991 | Avg Loss: 2.3991 | GPU Memory: 7184.5MB
+2025-09-10 14:22:05,302 - INFO - Epoch 1 | Batch 2/10 | Loss: 2.3362 | Avg Loss: 2.3676 | GPU Memory: 7182.5MB
+2025-09-10 14:22:05,570 - INFO - Epoch 1 | Batch 3/10 | Loss: 2.2418 | Avg Loss: 2.3257 | GPU Memory: 7183.5MB
+2025-09-10 14:22:05,895 - INFO - Epoch 1 | Batch 4/10 | Loss: 2.1960 | Avg Loss: 2.2933 | GPU Memory: 7185.7MB
+2025-09-10 14:22:06,274 - INFO - Epoch 1 | Batch 5/10 | Loss: 2.1666 | Avg Loss: 2.2679 | GPU Memory: 7183.5MB
+2025-09-10 14:22:06,633 - INFO - Epoch 1 | Batch 6/10 | Loss: 2.1358 | Avg Loss: 2.2459 | GPU Memory: 7185.7MB
+2025-09-10 14:22:06,916 - INFO - Epoch 1 | Batch 7/10 | Loss: 2.0915 | Avg Loss: 2.2239 | GPU Memory: 7183.5MB
+2025-09-10 14:22:07,262 - INFO - Epoch 1 | Batch 8/10 | Loss: 2.0720 | Avg Loss: 2.2049 | GPU Memory: 7185.7MB
+2025-09-10 14:22:07,540 - INFO - Epoch 1 | Batch 9/10 | Loss: 2.0212 | Avg Loss: 2.1845 | GPU Memory: 7183.5MB
+2025-09-10 14:22:07,823 - INFO - Epoch 1 | Batch 10/10 | Loss: 1.9642 | Avg Loss: 2.1379 | GPU Memory: 7181.2MB
+2025-09-10 14:22:08,567 - INFO - Epoch 1 completed. Loss: 2.1649, Time: 5.0s
+2025-09-10 14:23:01,248 - INFO - Validation | Loss: 2.2785, mIoU: 0.3352, IoUs: [0.85430784 0.00588078 0.34610755 0.1343953 ]
+2025-09-10 14:23:03,025 - INFO - Saved best model at epoch 1 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:23:03,929 - INFO - Epoch 2 | Batch 1/10 | Loss: 1.9665 | Avg Loss: 1.9665 | GPU Memory: 7180.8MB
+2025-09-10 14:23:04,231 - INFO - Epoch 2 | Batch 2/10 | Loss: 1.9192 | Avg Loss: 1.9428 | GPU Memory: 7184.2MB
+2025-09-10 14:23:04,569 - INFO - Epoch 2 | Batch 3/10 | Loss: 1.8954 | Avg Loss: 1.9270 | GPU Memory: 7183.5MB
+2025-09-10 14:23:04,887 - INFO - Epoch 2 | Batch 4/10 | Loss: 1.8430 | Avg Loss: 1.9060 | GPU Memory: 7185.7MB
+2025-09-10 14:23:05,160 - INFO - Epoch 2 | Batch 5/10 | Loss: 1.8438 | Avg Loss: 1.8936 | GPU Memory: 7183.5MB
+2025-09-10 14:23:05,451 - INFO - Epoch 2 | Batch 6/10 | Loss: 1.7847 | Avg Loss: 1.8754 | GPU Memory: 7185.7MB
+2025-09-10 14:23:05,732 - INFO - Epoch 2 | Batch 7/10 | Loss: 1.7882 | Avg Loss: 1.8629 | GPU Memory: 7183.5MB
+2025-09-10 14:23:06,022 - INFO - Epoch 2 | Batch 8/10 | Loss: 1.7498 | Avg Loss: 1.8488 | GPU Memory: 7185.7MB
+2025-09-10 14:23:06,301 - INFO - Epoch 2 | Batch 9/10 | Loss: 1.7316 | Avg Loss: 1.8358 | GPU Memory: 7183.5MB
+2025-09-10 14:23:06,563 - INFO - Epoch 2 | Batch 10/10 | Loss: 1.6830 | Avg Loss: 1.7995 | GPU Memory: 7181.2MB
+2025-09-10 14:23:07,311 - INFO - Epoch 2 completed. Loss: 1.8222, Time: 4.3s
+2025-09-10 14:23:59,841 - INFO - Validation | Loss: 2.0726, mIoU: 0.5408, IoUs: [0.93158373 0.67228584 0.54801349 0.01125951]
+2025-09-10 14:24:01,775 - INFO - Saved best model at epoch 2 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:24:02,681 - INFO - Epoch 3 | Batch 1/10 | Loss: 1.6603 | Avg Loss: 1.6603 | GPU Memory: 7180.8MB
+2025-09-10 14:24:02,885 - INFO - Epoch 3 | Batch 2/10 | Loss: 1.6547 | Avg Loss: 1.6575 | GPU Memory: 7184.2MB
+2025-09-10 14:24:03,313 - INFO - Epoch 3 | Batch 3/10 | Loss: 1.6248 | Avg Loss: 1.6466 | GPU Memory: 7183.5MB
+2025-09-10 14:24:03,647 - INFO - Epoch 3 | Batch 4/10 | Loss: 1.5856 | Avg Loss: 1.6313 | GPU Memory: 7185.7MB
+2025-09-10 14:24:03,930 - INFO - Epoch 3 | Batch 5/10 | Loss: 1.5622 | Avg Loss: 1.6175 | GPU Memory: 7183.5MB
+2025-09-10 14:24:04,210 - INFO - Epoch 3 | Batch 6/10 | Loss: 1.5666 | Avg Loss: 1.6090 | GPU Memory: 7185.7MB
+2025-09-10 14:24:04,495 - INFO - Epoch 3 | Batch 7/10 | Loss: 1.5225 | Avg Loss: 1.5967 | GPU Memory: 7183.5MB
+2025-09-10 14:24:04,780 - INFO - Epoch 3 | Batch 8/10 | Loss: 1.5414 | Avg Loss: 1.5898 | GPU Memory: 7185.7MB
+2025-09-10 14:24:05,067 - INFO - Epoch 3 | Batch 9/10 | Loss: 1.4659 | Avg Loss: 1.5760 | GPU Memory: 7183.5MB
+2025-09-10 14:24:05,320 - INFO - Epoch 3 | Batch 10/10 | Loss: 1.4771 | Avg Loss: 1.5477 | GPU Memory: 7181.2MB
+2025-09-10 14:24:06,052 - INFO - Epoch 3 completed. Loss: 1.5673, Time: 4.3s
+2025-09-10 14:24:58,494 - INFO - Validation | Loss: 1.7599, mIoU: 0.6032, IoUs: [0.96327641 0.49056067 0.58155034 0.37755432]
+2025-09-10 14:25:00,118 - INFO - Saved best model at epoch 3 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:25:01,074 - INFO - Epoch 4 | Batch 1/10 | Loss: 1.4279 | Avg Loss: 1.4279 | GPU Memory: 7180.8MB
+2025-09-10 14:25:01,394 - INFO - Epoch 4 | Batch 2/10 | Loss: 1.3955 | Avg Loss: 1.4117 | GPU Memory: 7184.2MB
+2025-09-10 14:25:01,697 - INFO - Epoch 4 | Batch 3/10 | Loss: 1.3459 | Avg Loss: 1.3898 | GPU Memory: 7183.5MB
+2025-09-10 14:25:01,992 - INFO - Epoch 4 | Batch 4/10 | Loss: 1.3912 | Avg Loss: 1.3901 | GPU Memory: 7185.7MB
+2025-09-10 14:25:02,273 - INFO - Epoch 4 | Batch 5/10 | Loss: 1.3291 | Avg Loss: 1.3779 | GPU Memory: 7183.5MB
+2025-09-10 14:25:02,567 - INFO - Epoch 4 | Batch 6/10 | Loss: 1.3419 | Avg Loss: 1.3719 | GPU Memory: 7185.7MB
+2025-09-10 14:25:02,846 - INFO - Epoch 4 | Batch 7/10 | Loss: 1.2790 | Avg Loss: 1.3587 | GPU Memory: 7183.5MB
+2025-09-10 14:25:03,133 - INFO - Epoch 4 | Batch 8/10 | Loss: 1.2404 | Avg Loss: 1.3439 | GPU Memory: 7185.7MB
+2025-09-10 14:25:03,412 - INFO - Epoch 4 | Batch 9/10 | Loss: 1.2642 | Avg Loss: 1.3350 | GPU Memory: 7183.5MB
+2025-09-10 14:25:03,677 - INFO - Epoch 4 | Batch 10/10 | Loss: 1.2449 | Avg Loss: 1.3104 | GPU Memory: 7181.2MB
+2025-09-10 14:25:04,397 - INFO - Epoch 4 completed. Loss: 1.3270, Time: 4.3s
+2025-09-10 14:25:57,122 - INFO - Validation | Loss: 1.4588, mIoU: 0.5684, IoUs: [0.95830135 0.32895261 0.60296558 0.38338897]
+2025-09-10 14:25:58,756 - INFO - Saved best model at epoch 4 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:25:59,649 - INFO - Epoch 5 | Batch 1/10 | Loss: 1.2041 | Avg Loss: 1.2041 | GPU Memory: 7180.8MB
+2025-09-10 14:25:59,956 - INFO - Epoch 5 | Batch 2/10 | Loss: 1.1569 | Avg Loss: 1.1805 | GPU Memory: 7184.2MB
+2025-09-10 14:26:00,258 - INFO - Epoch 5 | Batch 3/10 | Loss: 1.1535 | Avg Loss: 1.1715 | GPU Memory: 7183.5MB
+2025-09-10 14:26:00,587 - INFO - Epoch 5 | Batch 4/10 | Loss: 1.1408 | Avg Loss: 1.1638 | GPU Memory: 7185.7MB
+2025-09-10 14:26:00,853 - INFO - Epoch 5 | Batch 5/10 | Loss: 1.0827 | Avg Loss: 1.1476 | GPU Memory: 7183.5MB
+2025-09-10 14:26:01,139 - INFO - Epoch 5 | Batch 6/10 | Loss: 1.0576 | Avg Loss: 1.1326 | GPU Memory: 7185.7MB
+2025-09-10 14:26:01,422 - INFO - Epoch 5 | Batch 7/10 | Loss: 1.0628 | Avg Loss: 1.1226 | GPU Memory: 7183.5MB
+2025-09-10 14:26:01,704 - INFO - Epoch 5 | Batch 8/10 | Loss: 1.0748 | Avg Loss: 1.1166 | GPU Memory: 7185.7MB
+2025-09-10 14:26:01,993 - INFO - Epoch 5 | Batch 9/10 | Loss: 1.0350 | Avg Loss: 1.1076 | GPU Memory: 7183.5MB
+2025-09-10 14:26:02,249 - INFO - Epoch 5 | Batch 10/10 | Loss: 1.0460 | Avg Loss: 1.0883 | GPU Memory: 7181.2MB
+2025-09-10 14:26:02,954 - INFO - Epoch 5 completed. Loss: 1.1021, Time: 4.2s
+2025-09-10 14:26:55,280 - INFO - Validation | Loss: 1.2182, mIoU: 0.6455, IoUs: [0.9701619  0.61469114 0.58903003 0.40821714]
+2025-09-10 14:26:56,899 - INFO - Saved best model at epoch 5 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:26:57,855 - INFO - Epoch 6 | Batch 1/10 | Loss: 0.9729 | Avg Loss: 0.9729 | GPU Memory: 7180.8MB
+2025-09-10 14:26:58,181 - INFO - Epoch 6 | Batch 2/10 | Loss: 0.9885 | Avg Loss: 0.9807 | GPU Memory: 7184.2MB
+2025-09-10 14:26:58,479 - INFO - Epoch 6 | Batch 3/10 | Loss: 0.9938 | Avg Loss: 0.9851 | GPU Memory: 7183.5MB
+2025-09-10 14:26:58,764 - INFO - Epoch 6 | Batch 4/10 | Loss: 0.9683 | Avg Loss: 0.9809 | GPU Memory: 7185.7MB
+2025-09-10 14:26:59,042 - INFO - Epoch 6 | Batch 5/10 | Loss: 1.0033 | Avg Loss: 0.9854 | GPU Memory: 7183.5MB
+2025-09-10 14:26:59,328 - INFO - Epoch 6 | Batch 6/10 | Loss: 1.0146 | Avg Loss: 0.9903 | GPU Memory: 7185.7MB
+2025-09-10 14:26:59,607 - INFO - Epoch 6 | Batch 7/10 | Loss: 0.9652 | Avg Loss: 0.9867 | GPU Memory: 7183.5MB
+2025-09-10 14:26:59,885 - INFO - Epoch 6 | Batch 8/10 | Loss: 0.9605 | Avg Loss: 0.9834 | GPU Memory: 7185.7MB
+2025-09-10 14:27:00,169 - INFO - Epoch 6 | Batch 9/10 | Loss: 0.9779 | Avg Loss: 0.9828 | GPU Memory: 7183.5MB
+2025-09-10 14:27:00,426 - INFO - Epoch 6 | Batch 10/10 | Loss: 0.9511 | Avg Loss: 0.9677 | GPU Memory: 7181.2MB
+2025-09-10 14:27:01,170 - INFO - Epoch 6 completed. Loss: 0.9800, Time: 4.3s
+2025-09-10 14:27:53,286 - INFO - Validation | Loss: 1.2395, mIoU: 0.6942, IoUs: [0.98212522 0.89933032 0.63366345 0.26151409]
+2025-09-10 14:27:54,248 - INFO - Epoch 7 | Batch 1/10 | Loss: 0.9415 | Avg Loss: 0.9415 | GPU Memory: 7180.8MB
+2025-09-10 14:27:54,560 - INFO - Epoch 7 | Batch 2/10 | Loss: 0.9599 | Avg Loss: 0.9507 | GPU Memory: 7184.2MB
+2025-09-10 14:27:54,866 - INFO - Epoch 7 | Batch 3/10 | Loss: 0.9674 | Avg Loss: 0.9563 | GPU Memory: 7183.5MB
+2025-09-10 14:27:55,153 - INFO - Epoch 7 | Batch 4/10 | Loss: 0.9615 | Avg Loss: 0.9576 | GPU Memory: 7185.7MB
+2025-09-10 14:27:55,432 - INFO - Epoch 7 | Batch 5/10 | Loss: 0.9575 | Avg Loss: 0.9575 | GPU Memory: 7183.5MB
+2025-09-10 14:27:55,716 - INFO - Epoch 7 | Batch 6/10 | Loss: 0.9419 | Avg Loss: 0.9549 | GPU Memory: 7185.7MB
+2025-09-10 14:27:56,000 - INFO - Epoch 7 | Batch 7/10 | Loss: 0.9774 | Avg Loss: 0.9582 | GPU Memory: 7183.5MB
+2025-09-10 14:27:56,278 - INFO - Epoch 7 | Batch 8/10 | Loss: 0.9366 | Avg Loss: 0.9555 | GPU Memory: 7185.7MB
+2025-09-10 14:27:56,556 - INFO - Epoch 7 | Batch 9/10 | Loss: 0.9471 | Avg Loss: 0.9545 | GPU Memory: 7183.5MB
+2025-09-10 14:27:56,812 - INFO - Epoch 7 | Batch 10/10 | Loss: 0.9361 | Avg Loss: 0.9410 | GPU Memory: 7181.2MB
+2025-09-10 14:27:57,564 - INFO - Epoch 7 completed. Loss: 0.9529, Time: 4.3s
+2025-09-10 14:28:50,146 - INFO - Validation | Loss: 1.1552, mIoU: 0.7046, IoUs: [0.98426751 0.91069634 0.62357324 0.29996266]
+2025-09-10 14:28:51,793 - INFO - Saved best model at epoch 7 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:28:52,746 - INFO - Epoch 8 | Batch 1/10 | Loss: 0.9384 | Avg Loss: 0.9384 | GPU Memory: 7180.8MB
+2025-09-10 14:28:53,060 - INFO - Epoch 8 | Batch 2/10 | Loss: 0.9227 | Avg Loss: 0.9306 | GPU Memory: 7184.2MB
+2025-09-10 14:28:53,356 - INFO - Epoch 8 | Batch 3/10 | Loss: 0.9349 | Avg Loss: 0.9320 | GPU Memory: 7183.5MB
+2025-09-10 14:28:53,639 - INFO - Epoch 8 | Batch 4/10 | Loss: 0.9466 | Avg Loss: 0.9357 | GPU Memory: 7185.7MB
+2025-09-10 14:28:53,924 - INFO - Epoch 8 | Batch 5/10 | Loss: 0.9311 | Avg Loss: 0.9348 | GPU Memory: 7183.5MB
+2025-09-10 14:28:54,203 - INFO - Epoch 8 | Batch 6/10 | Loss: 0.9193 | Avg Loss: 0.9322 | GPU Memory: 7185.7MB
+2025-09-10 14:28:54,486 - INFO - Epoch 8 | Batch 7/10 | Loss: 0.9475 | Avg Loss: 0.9344 | GPU Memory: 7183.5MB
+2025-09-10 14:28:54,765 - INFO - Epoch 8 | Batch 8/10 | Loss: 0.9153 | Avg Loss: 0.9320 | GPU Memory: 7185.7MB
+2025-09-10 14:28:55,047 - INFO - Epoch 8 | Batch 9/10 | Loss: 0.9675 | Avg Loss: 0.9359 | GPU Memory: 7183.5MB
+2025-09-10 14:28:55,304 - INFO - Epoch 8 | Batch 10/10 | Loss: 0.9167 | Avg Loss: 0.9225 | GPU Memory: 7181.2MB
+2025-09-10 14:28:56,044 - INFO - Epoch 8 completed. Loss: 0.9342, Time: 4.2s
+2025-09-10 14:29:48,015 - INFO - Validation | Loss: 1.1046, mIoU: 0.7205, IoUs: [0.98758792 0.90494649 0.62949187 0.36017006]
+2025-09-10 14:29:49,625 - INFO - Saved best model at epoch 8 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:29:50,519 - INFO - Epoch 9 | Batch 1/10 | Loss: 0.9060 | Avg Loss: 0.9060 | GPU Memory: 7180.8MB
+2025-09-10 14:29:50,840 - INFO - Epoch 9 | Batch 2/10 | Loss: 0.9221 | Avg Loss: 0.9140 | GPU Memory: 7184.2MB
+2025-09-10 14:29:51,179 - INFO - Epoch 9 | Batch 3/10 | Loss: 0.9314 | Avg Loss: 0.9198 | GPU Memory: 7183.5MB
+2025-09-10 14:29:51,493 - INFO - Epoch 9 | Batch 4/10 | Loss: 0.9467 | Avg Loss: 0.9266 | GPU Memory: 7185.7MB
+2025-09-10 14:29:51,774 - INFO - Epoch 9 | Batch 5/10 | Loss: 0.9348 | Avg Loss: 0.9282 | GPU Memory: 7183.5MB
+2025-09-10 14:29:52,054 - INFO - Epoch 9 | Batch 6/10 | Loss: 0.8977 | Avg Loss: 0.9231 | GPU Memory: 7185.7MB
+2025-09-10 14:29:52,332 - INFO - Epoch 9 | Batch 7/10 | Loss: 0.9067 | Avg Loss: 0.9208 | GPU Memory: 7183.5MB
+2025-09-10 14:29:52,616 - INFO - Epoch 9 | Batch 8/10 | Loss: 0.8921 | Avg Loss: 0.9172 | GPU Memory: 7185.7MB
+2025-09-10 14:29:52,898 - INFO - Epoch 9 | Batch 9/10 | Loss: 0.9212 | Avg Loss: 0.9176 | GPU Memory: 7183.5MB
+2025-09-10 14:29:53,155 - INFO - Epoch 9 | Batch 10/10 | Loss: 0.9097 | Avg Loss: 0.9055 | GPU Memory: 7181.2MB
+2025-09-10 14:29:53,904 - INFO - Epoch 9 completed. Loss: 0.9169, Time: 4.3s
+2025-09-10 14:30:45,833 - INFO - Validation | Loss: 1.0957, mIoU: 0.7217, IoUs: [0.98758982 0.91159426 0.6330642  0.35438022]
+2025-09-10 14:30:47,436 - INFO - Saved best model at epoch 9 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:30:48,319 - INFO - Epoch 10 | Batch 1/10 | Loss: 0.9031 | Avg Loss: 0.9031 | GPU Memory: 7180.8MB
+2025-09-10 14:30:48,637 - INFO - Epoch 10 | Batch 2/10 | Loss: 0.8911 | Avg Loss: 0.8971 | GPU Memory: 7184.2MB
+2025-09-10 14:30:48,973 - INFO - Epoch 10 | Batch 3/10 | Loss: 0.9212 | Avg Loss: 0.9051 | GPU Memory: 7183.5MB
+2025-09-10 14:30:49,279 - INFO - Epoch 10 | Batch 4/10 | Loss: 0.9299 | Avg Loss: 0.9113 | GPU Memory: 7185.7MB
+2025-09-10 14:30:49,561 - INFO - Epoch 10 | Batch 5/10 | Loss: 0.8858 | Avg Loss: 0.9062 | GPU Memory: 7183.5MB
+2025-09-10 14:30:49,843 - INFO - Epoch 10 | Batch 6/10 | Loss: 0.9032 | Avg Loss: 0.9057 | GPU Memory: 7185.7MB
+2025-09-10 14:30:50,127 - INFO - Epoch 10 | Batch 7/10 | Loss: 0.9127 | Avg Loss: 0.9067 | GPU Memory: 7183.5MB
+2025-09-10 14:30:50,407 - INFO - Epoch 10 | Batch 8/10 | Loss: 0.8747 | Avg Loss: 0.9027 | GPU Memory: 7185.7MB
+2025-09-10 14:30:50,689 - INFO - Epoch 10 | Batch 9/10 | Loss: 0.8914 | Avg Loss: 0.9014 | GPU Memory: 7183.5MB
+2025-09-10 14:30:50,941 - INFO - Epoch 10 | Batch 10/10 | Loss: 0.8919 | Avg Loss: 0.8893 | GPU Memory: 7181.2MB
+2025-09-10 14:30:51,644 - INFO - Epoch 10 completed. Loss: 0.9006, Time: 4.2s
+2025-09-10 14:31:43,499 - INFO - Validation | Loss: 1.0741, mIoU: 0.7302, IoUs: [0.98759769 0.91272359 0.63984776 0.38079457]
+2025-09-10 14:31:47,369 - INFO - Saved periodic checkpoint at epoch 10 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_epoch_10.pth
+2025-09-10 14:31:48,985 - INFO - Saved best model at epoch 10 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:31:49,884 - INFO - Epoch 11 | Batch 1/10 | Loss: 0.8928 | Avg Loss: 0.8928 | GPU Memory: 7180.8MB
+2025-09-10 14:31:50,228 - INFO - Epoch 11 | Batch 2/10 | Loss: 0.9238 | Avg Loss: 0.9083 | GPU Memory: 7184.2MB
+2025-09-10 14:31:50,534 - INFO - Epoch 11 | Batch 3/10 | Loss: 0.8744 | Avg Loss: 0.8970 | GPU Memory: 7183.5MB
+2025-09-10 14:31:50,873 - INFO - Epoch 11 | Batch 4/10 | Loss: 0.9021 | Avg Loss: 0.8983 | GPU Memory: 7185.7MB
+2025-09-10 14:31:51,148 - INFO - Epoch 11 | Batch 5/10 | Loss: 0.8737 | Avg Loss: 0.8934 | GPU Memory: 7183.5MB
+2025-09-10 14:31:51,429 - INFO - Epoch 11 | Batch 6/10 | Loss: 0.8869 | Avg Loss: 0.8923 | GPU Memory: 7185.7MB
+2025-09-10 14:31:51,711 - INFO - Epoch 11 | Batch 7/10 | Loss: 0.8637 | Avg Loss: 0.8882 | GPU Memory: 7183.5MB
+2025-09-10 14:31:51,992 - INFO - Epoch 11 | Batch 8/10 | Loss: 0.8811 | Avg Loss: 0.8873 | GPU Memory: 7185.7MB
+2025-09-10 14:31:52,273 - INFO - Epoch 11 | Batch 9/10 | Loss: 0.8723 | Avg Loss: 0.8856 | GPU Memory: 7183.5MB
+2025-09-10 14:31:52,520 - INFO - Epoch 11 | Batch 10/10 | Loss: 0.8864 | Avg Loss: 0.8746 | GPU Memory: 7181.2MB
+2025-09-10 14:31:53,214 - INFO - Epoch 11 completed. Loss: 0.8857, Time: 4.2s
+2025-09-10 14:32:45,485 - INFO - Validation | Loss: 1.0602, mIoU: 0.7285, IoUs: [0.98741279 0.91129582 0.63640143 0.37889454]
+2025-09-10 14:32:47,287 - INFO - Saved best model at epoch 11 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:32:48,170 - INFO - Epoch 12 | Batch 1/10 | Loss: 0.8679 | Avg Loss: 0.8679 | GPU Memory: 7180.8MB
+2025-09-10 14:32:48,493 - INFO - Epoch 12 | Batch 2/10 | Loss: 0.8733 | Avg Loss: 0.8706 | GPU Memory: 7184.2MB
+2025-09-10 14:32:48,838 - INFO - Epoch 12 | Batch 3/10 | Loss: 0.8911 | Avg Loss: 0.8775 | GPU Memory: 7183.5MB
+2025-09-10 14:32:49,127 - INFO - Epoch 12 | Batch 4/10 | Loss: 0.8803 | Avg Loss: 0.8782 | GPU Memory: 7185.7MB
+2025-09-10 14:32:49,405 - INFO - Epoch 12 | Batch 5/10 | Loss: 0.8781 | Avg Loss: 0.8781 | GPU Memory: 7183.5MB
+2025-09-10 14:32:49,683 - INFO - Epoch 12 | Batch 6/10 | Loss: 0.8873 | Avg Loss: 0.8797 | GPU Memory: 7185.7MB
+2025-09-10 14:32:49,968 - INFO - Epoch 12 | Batch 7/10 | Loss: 0.8689 | Avg Loss: 0.8781 | GPU Memory: 7183.5MB
+2025-09-10 14:32:50,252 - INFO - Epoch 12 | Batch 8/10 | Loss: 0.8709 | Avg Loss: 0.8772 | GPU Memory: 7185.7MB
+2025-09-10 14:32:50,528 - INFO - Epoch 12 | Batch 9/10 | Loss: 0.9142 | Avg Loss: 0.8813 | GPU Memory: 7183.5MB
+2025-09-10 14:32:50,784 - INFO - Epoch 12 | Batch 10/10 | Loss: 0.8929 | Avg Loss: 0.8713 | GPU Memory: 7181.2MB
+2025-09-10 14:32:51,498 - INFO - Epoch 12 completed. Loss: 0.8824, Time: 4.2s
+2025-09-10 14:33:43,614 - INFO - Validation | Loss: 1.0554, mIoU: 0.7287, IoUs: [0.98718084 0.91101294 0.63713285 0.37957145]
+2025-09-10 14:33:45,198 - INFO - Saved best model at epoch 12 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:33:46,067 - INFO - Epoch 13 | Batch 1/10 | Loss: 0.8794 | Avg Loss: 0.8794 | GPU Memory: 7180.8MB
+2025-09-10 14:33:46,386 - INFO - Epoch 13 | Batch 2/10 | Loss: 0.8956 | Avg Loss: 0.8875 | GPU Memory: 7184.2MB
+2025-09-10 14:33:46,736 - INFO - Epoch 13 | Batch 3/10 | Loss: 0.8881 | Avg Loss: 0.8877 | GPU Memory: 7183.5MB
+2025-09-10 14:33:47,039 - INFO - Epoch 13 | Batch 4/10 | Loss: 0.8711 | Avg Loss: 0.8835 | GPU Memory: 7185.7MB
+2025-09-10 14:33:47,315 - INFO - Epoch 13 | Batch 5/10 | Loss: 0.8942 | Avg Loss: 0.8857 | GPU Memory: 7183.5MB
+2025-09-10 14:33:47,598 - INFO - Epoch 13 | Batch 6/10 | Loss: 0.8735 | Avg Loss: 0.8837 | GPU Memory: 7185.7MB
+2025-09-10 14:33:47,880 - INFO - Epoch 13 | Batch 7/10 | Loss: 0.8920 | Avg Loss: 0.8849 | GPU Memory: 7183.5MB
+2025-09-10 14:33:48,159 - INFO - Epoch 13 | Batch 8/10 | Loss: 0.8805 | Avg Loss: 0.8843 | GPU Memory: 7185.7MB
+2025-09-10 14:33:48,439 - INFO - Epoch 13 | Batch 9/10 | Loss: 0.8849 | Avg Loss: 0.8844 | GPU Memory: 7183.5MB
+2025-09-10 14:33:48,696 - INFO - Epoch 13 | Batch 10/10 | Loss: 0.8557 | Avg Loss: 0.8708 | GPU Memory: 7181.2MB
+2025-09-10 14:33:49,403 - INFO - Epoch 13 completed. Loss: 0.8818, Time: 4.2s
+2025-09-10 14:34:41,392 - INFO - Validation | Loss: 1.0513, mIoU: 0.7287, IoUs: [0.98740698 0.91001801 0.63891981 0.37862245]
+2025-09-10 14:34:42,983 - INFO - Saved best model at epoch 13 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:34:43,849 - INFO - Epoch 14 | Batch 1/10 | Loss: 0.8582 | Avg Loss: 0.8582 | GPU Memory: 7180.8MB
+2025-09-10 14:34:44,188 - INFO - Epoch 14 | Batch 2/10 | Loss: 0.8818 | Avg Loss: 0.8700 | GPU Memory: 7184.2MB
+2025-09-10 14:34:44,534 - INFO - Epoch 14 | Batch 3/10 | Loss: 0.8991 | Avg Loss: 0.8797 | GPU Memory: 7183.5MB
+2025-09-10 14:34:44,835 - INFO - Epoch 14 | Batch 4/10 | Loss: 0.8786 | Avg Loss: 0.8794 | GPU Memory: 7185.7MB
+2025-09-10 14:34:45,110 - INFO - Epoch 14 | Batch 5/10 | Loss: 0.8940 | Avg Loss: 0.8823 | GPU Memory: 7183.5MB
+2025-09-10 14:34:45,391 - INFO - Epoch 14 | Batch 6/10 | Loss: 0.8996 | Avg Loss: 0.8852 | GPU Memory: 7185.7MB
+2025-09-10 14:34:45,676 - INFO - Epoch 14 | Batch 7/10 | Loss: 0.8604 | Avg Loss: 0.8817 | GPU Memory: 7183.5MB
+2025-09-10 14:34:45,958 - INFO - Epoch 14 | Batch 8/10 | Loss: 0.8830 | Avg Loss: 0.8818 | GPU Memory: 7185.7MB
+2025-09-10 14:34:46,268 - INFO - Epoch 14 | Batch 9/10 | Loss: 0.8698 | Avg Loss: 0.8805 | GPU Memory: 7183.5MB
+2025-09-10 14:34:46,521 - INFO - Epoch 14 | Batch 10/10 | Loss: 0.8795 | Avg Loss: 0.8694 | GPU Memory: 7181.2MB
+2025-09-10 14:34:47,259 - INFO - Epoch 14 completed. Loss: 0.8804, Time: 4.3s
+2025-09-10 14:35:39,145 - INFO - Validation | Loss: 1.0516, mIoU: 0.7285, IoUs: [0.98735807 0.91027503 0.63946722 0.37706947]
+2025-09-10 14:35:40,020 - INFO - Epoch 15 | Batch 1/10 | Loss: 0.8927 | Avg Loss: 0.8927 | GPU Memory: 7180.8MB
+2025-09-10 14:35:40,343 - INFO - Epoch 15 | Batch 2/10 | Loss: 0.8768 | Avg Loss: 0.8847 | GPU Memory: 7184.2MB
+2025-09-10 14:35:40,667 - INFO - Epoch 15 | Batch 3/10 | Loss: 0.8611 | Avg Loss: 0.8769 | GPU Memory: 7183.5MB
+2025-09-10 14:35:40,995 - INFO - Epoch 15 | Batch 4/10 | Loss: 0.8720 | Avg Loss: 0.8756 | GPU Memory: 7185.7MB
+2025-09-10 14:35:41,271 - INFO - Epoch 15 | Batch 5/10 | Loss: 0.8590 | Avg Loss: 0.8723 | GPU Memory: 7183.5MB
+2025-09-10 14:35:41,550 - INFO - Epoch 15 | Batch 6/10 | Loss: 0.8874 | Avg Loss: 0.8748 | GPU Memory: 7185.7MB
+2025-09-10 14:35:41,829 - INFO - Epoch 15 | Batch 7/10 | Loss: 0.8494 | Avg Loss: 0.8712 | GPU Memory: 7183.5MB
+2025-09-10 14:35:42,111 - INFO - Epoch 15 | Batch 8/10 | Loss: 0.8852 | Avg Loss: 0.8729 | GPU Memory: 7185.7MB
+2025-09-10 14:35:42,393 - INFO - Epoch 15 | Batch 9/10 | Loss: 0.8996 | Avg Loss: 0.8759 | GPU Memory: 7183.5MB
+2025-09-10 14:35:42,646 - INFO - Epoch 15 | Batch 10/10 | Loss: 0.8817 | Avg Loss: 0.8655 | GPU Memory: 7181.2MB
+2025-09-10 14:35:43,362 - INFO - Epoch 15 completed. Loss: 0.8764, Time: 4.2s
+2025-09-10 14:36:35,220 - INFO - Validation | Loss: 1.0496, mIoU: 0.7288, IoUs: [0.98735017 0.91062064 0.63862414 0.37868341]
+2025-09-10 14:36:37,042 - INFO - Saved best model at epoch 15 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:36:37,925 - INFO - Epoch 16 | Batch 1/10 | Loss: 0.8781 | Avg Loss: 0.8781 | GPU Memory: 7180.8MB
+2025-09-10 14:36:38,272 - INFO - Epoch 16 | Batch 2/10 | Loss: 0.8663 | Avg Loss: 0.8722 | GPU Memory: 7184.2MB
+2025-09-10 14:36:38,599 - INFO - Epoch 16 | Batch 3/10 | Loss: 0.9191 | Avg Loss: 0.8878 | GPU Memory: 7183.5MB
+2025-09-10 14:36:38,903 - INFO - Epoch 16 | Batch 4/10 | Loss: 0.8637 | Avg Loss: 0.8818 | GPU Memory: 7185.7MB
+2025-09-10 14:36:39,182 - INFO - Epoch 16 | Batch 5/10 | Loss: 0.8680 | Avg Loss: 0.8790 | GPU Memory: 7183.5MB
+2025-09-10 14:36:39,457 - INFO - Epoch 16 | Batch 6/10 | Loss: 0.8628 | Avg Loss: 0.8763 | GPU Memory: 7185.7MB
+2025-09-10 14:36:39,742 - INFO - Epoch 16 | Batch 7/10 | Loss: 0.8811 | Avg Loss: 0.8770 | GPU Memory: 7183.5MB
+2025-09-10 14:36:40,023 - INFO - Epoch 16 | Batch 8/10 | Loss: 0.8621 | Avg Loss: 0.8752 | GPU Memory: 7185.7MB
+2025-09-10 14:36:40,303 - INFO - Epoch 16 | Batch 9/10 | Loss: 0.8654 | Avg Loss: 0.8741 | GPU Memory: 7183.5MB
+2025-09-10 14:36:40,559 - INFO - Epoch 16 | Batch 10/10 | Loss: 0.8926 | Avg Loss: 0.8648 | GPU Memory: 7181.2MB
+2025-09-10 14:36:41,255 - INFO - Epoch 16 completed. Loss: 0.8757, Time: 4.2s
+2025-09-10 14:37:33,463 - INFO - Validation | Loss: 1.0481, mIoU: 0.7292, IoUs: [0.98732091 0.91039926 0.63853776 0.38044952]
+2025-09-10 14:37:35,083 - INFO - Saved best model at epoch 16 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:37:35,984 - INFO - Epoch 17 | Batch 1/10 | Loss: 0.8945 | Avg Loss: 0.8945 | GPU Memory: 7180.8MB
+2025-09-10 14:37:36,305 - INFO - Epoch 17 | Batch 2/10 | Loss: 0.8909 | Avg Loss: 0.8927 | GPU Memory: 7184.2MB
+2025-09-10 14:37:36,634 - INFO - Epoch 17 | Batch 3/10 | Loss: 0.8652 | Avg Loss: 0.8836 | GPU Memory: 7183.5MB
+2025-09-10 14:37:36,943 - INFO - Epoch 17 | Batch 4/10 | Loss: 0.8609 | Avg Loss: 0.8779 | GPU Memory: 7185.7MB
+2025-09-10 14:37:37,225 - INFO - Epoch 17 | Batch 5/10 | Loss: 0.8593 | Avg Loss: 0.8742 | GPU Memory: 7183.5MB
+2025-09-10 14:37:37,501 - INFO - Epoch 17 | Batch 6/10 | Loss: 0.8668 | Avg Loss: 0.8730 | GPU Memory: 7185.7MB
+2025-09-10 14:37:37,782 - INFO - Epoch 17 | Batch 7/10 | Loss: 0.9015 | Avg Loss: 0.8770 | GPU Memory: 7183.5MB
+2025-09-10 14:37:38,065 - INFO - Epoch 17 | Batch 8/10 | Loss: 0.8994 | Avg Loss: 0.8798 | GPU Memory: 7185.7MB
+2025-09-10 14:37:38,346 - INFO - Epoch 17 | Batch 9/10 | Loss: 0.8679 | Avg Loss: 0.8785 | GPU Memory: 7183.5MB
+2025-09-10 14:37:38,603 - INFO - Epoch 17 | Batch 10/10 | Loss: 0.8993 | Avg Loss: 0.8693 | GPU Memory: 7181.2MB
+2025-09-10 14:37:39,301 - INFO - Epoch 17 completed. Loss: 0.8803, Time: 4.2s
+2025-09-10 14:38:31,422 - INFO - Validation | Loss: 1.0494, mIoU: 0.7294, IoUs: [0.98718327 0.9110736  0.64116634 0.37826684]
+2025-09-10 14:38:32,313 - INFO - Epoch 18 | Batch 1/10 | Loss: 0.8640 | Avg Loss: 0.8640 | GPU Memory: 7180.8MB
+2025-09-10 14:38:32,633 - INFO - Epoch 18 | Batch 2/10 | Loss: 0.8808 | Avg Loss: 0.8724 | GPU Memory: 7184.2MB
+2025-09-10 14:38:32,950 - INFO - Epoch 18 | Batch 3/10 | Loss: 0.8841 | Avg Loss: 0.8763 | GPU Memory: 7183.5MB
+2025-09-10 14:38:33,270 - INFO - Epoch 18 | Batch 4/10 | Loss: 0.8537 | Avg Loss: 0.8707 | GPU Memory: 7185.7MB
+2025-09-10 14:38:33,547 - INFO - Epoch 18 | Batch 5/10 | Loss: 0.8884 | Avg Loss: 0.8742 | GPU Memory: 7183.5MB
+2025-09-10 14:38:33,828 - INFO - Epoch 18 | Batch 6/10 | Loss: 0.9006 | Avg Loss: 0.8786 | GPU Memory: 7185.7MB
+2025-09-10 14:38:34,112 - INFO - Epoch 18 | Batch 7/10 | Loss: 0.8918 | Avg Loss: 0.8805 | GPU Memory: 7183.5MB
+2025-09-10 14:38:34,393 - INFO - Epoch 18 | Batch 8/10 | Loss: 0.8556 | Avg Loss: 0.8774 | GPU Memory: 7185.7MB
+2025-09-10 14:38:34,673 - INFO - Epoch 18 | Batch 9/10 | Loss: 0.8534 | Avg Loss: 0.8747 | GPU Memory: 7183.5MB
+2025-09-10 14:38:34,928 - INFO - Epoch 18 | Batch 10/10 | Loss: 0.8931 | Avg Loss: 0.8654 | GPU Memory: 7181.2MB
+2025-09-10 14:38:35,631 - INFO - Epoch 18 completed. Loss: 0.8764, Time: 4.2s
+2025-09-10 14:39:27,289 - INFO - Validation | Loss: 1.0468, mIoU: 0.7295, IoUs: [0.98732375 0.91048491 0.63908471 0.38091279]
+2025-09-10 14:39:28,874 - INFO - Saved best model at epoch 18 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:39:29,770 - INFO - Epoch 19 | Batch 1/10 | Loss: 0.8855 | Avg Loss: 0.8855 | GPU Memory: 7180.8MB
+2025-09-10 14:39:30,090 - INFO - Epoch 19 | Batch 2/10 | Loss: 0.8742 | Avg Loss: 0.8799 | GPU Memory: 7184.2MB
+2025-09-10 14:39:30,420 - INFO - Epoch 19 | Batch 3/10 | Loss: 0.8583 | Avg Loss: 0.8727 | GPU Memory: 7183.5MB
+2025-09-10 14:39:30,745 - INFO - Epoch 19 | Batch 4/10 | Loss: 0.8648 | Avg Loss: 0.8707 | GPU Memory: 7185.7MB
+2025-09-10 14:39:31,023 - INFO - Epoch 19 | Batch 5/10 | Loss: 0.8702 | Avg Loss: 0.8706 | GPU Memory: 7183.5MB
+2025-09-10 14:39:31,302 - INFO - Epoch 19 | Batch 6/10 | Loss: 0.8535 | Avg Loss: 0.8678 | GPU Memory: 7185.7MB
+2025-09-10 14:39:31,586 - INFO - Epoch 19 | Batch 7/10 | Loss: 0.8665 | Avg Loss: 0.8676 | GPU Memory: 7183.5MB
+2025-09-10 14:39:31,867 - INFO - Epoch 19 | Batch 8/10 | Loss: 0.8960 | Avg Loss: 0.8711 | GPU Memory: 7185.7MB
+2025-09-10 14:39:32,146 - INFO - Epoch 19 | Batch 9/10 | Loss: 0.8872 | Avg Loss: 0.8729 | GPU Memory: 7183.5MB
+2025-09-10 14:39:32,398 - INFO - Epoch 19 | Batch 10/10 | Loss: 0.8993 | Avg Loss: 0.8643 | GPU Memory: 7181.2MB
+2025-09-10 14:39:33,147 - INFO - Epoch 19 completed. Loss: 0.8753, Time: 4.3s
+2025-09-10 14:40:25,286 - INFO - Validation | Loss: 1.0459, mIoU: 0.7292, IoUs: [0.9873379  0.91030524 0.63697587 0.38215841]
+2025-09-10 14:40:26,866 - INFO - Saved best model at epoch 19 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_best.pth
+2025-09-10 14:40:27,753 - INFO - Epoch 20 | Batch 1/10 | Loss: 0.8809 | Avg Loss: 0.8809 | GPU Memory: 7180.8MB
+2025-09-10 14:40:28,070 - INFO - Epoch 20 | Batch 2/10 | Loss: 0.8920 | Avg Loss: 0.8864 | GPU Memory: 7184.2MB
+2025-09-10 14:40:28,414 - INFO - Epoch 20 | Batch 3/10 | Loss: 0.8788 | Avg Loss: 0.8839 | GPU Memory: 7183.5MB
+2025-09-10 14:40:28,730 - INFO - Epoch 20 | Batch 4/10 | Loss: 0.8988 | Avg Loss: 0.8876 | GPU Memory: 7185.7MB
+2025-09-10 14:40:29,006 - INFO - Epoch 20 | Batch 5/10 | Loss: 0.8724 | Avg Loss: 0.8846 | GPU Memory: 7183.5MB
+2025-09-10 14:40:29,286 - INFO - Epoch 20 | Batch 6/10 | Loss: 0.9223 | Avg Loss: 0.8908 | GPU Memory: 7185.7MB
+2025-09-10 14:40:29,571 - INFO - Epoch 20 | Batch 7/10 | Loss: 0.8790 | Avg Loss: 0.8892 | GPU Memory: 7183.5MB
+2025-09-10 14:40:29,852 - INFO - Epoch 20 | Batch 8/10 | Loss: 0.8779 | Avg Loss: 0.8877 | GPU Memory: 7185.7MB
+2025-09-10 14:40:30,130 - INFO - Epoch 20 | Batch 9/10 | Loss: 0.8771 | Avg Loss: 0.8866 | GPU Memory: 7183.5MB
+2025-09-10 14:40:30,382 - INFO - Epoch 20 | Batch 10/10 | Loss: 0.8535 | Avg Loss: 0.8726 | GPU Memory: 7181.2MB
+2025-09-10 14:40:31,062 - INFO - Epoch 20 completed. Loss: 0.8836, Time: 4.2s
+2025-09-10 14:41:22,987 - INFO - Validation | Loss: 1.0470, mIoU: 0.7284, IoUs: [0.98739191 0.9099147  0.63770192 0.37849621]
+2025-09-10 14:41:26,674 - INFO - Saved periodic checkpoint at epoch 20 to runs/ResNet50UNet_DAC_20250910_142203/checkpoints/ResNet50UNet_DAC_epoch_20.pth
+2025-09-10 14:41:27,538 - INFO - Epoch 21 | Batch 1/10 | Loss: 0.8854 | Avg Loss: 0.8854 | GPU Memory: 7180.8MB
+2025-09-10 14:41:27,868 - INFO - Epoch 21 | Batch 2/10 | Loss: 0.8527 | Avg Loss: 0.8691 | GPU Memory: 7184.2MB
+2025-09-10 14:41:28,189 - INFO - Epoch 21 | Batch 3/10 | Loss: 0.8709 | Avg Loss: 0.8697 | GPU Memory: 7183.5MB
+2025-09-10 14:41:28,528 - INFO - Epoch 21 | Batch 4/10 | Loss: 0.8790 | Avg Loss: 0.8720 | GPU Memory: 7185.7MB
+2025-09-10 14:41:28,793 - INFO - Epoch 21 | Batch 5/10 | Loss: 0.8601 | Avg Loss: 0.8696 | GPU Memory: 7183.5MB
+2025-09-10 14:41:29,074 - INFO - Epoch 21 | Batch 6/10 | Loss: 0.8919 | Avg Loss: 0.8733 | GPU Memory: 7185.7MB
+2025-09-10 14:41:29,357 - INFO - Epoch 21 | Batch 7/10 | Loss: 0.8699 | Avg Loss: 0.8728 | GPU Memory: 7183.5MB
+2025-09-10 14:41:29,636 - INFO - Epoch 21 | Batch 8/10 | Loss: 0.8681 | Avg Loss: 0.8722 | GPU Memory: 7185.7MB
+2025-09-10 14:41:29,913 - INFO - Epoch 21 | Batch 9/10 | Loss: 0.8704 | Avg Loss: 0.8720 | GPU Memory: 7183.5MB
+2025-09-10 14:41:30,170 - INFO - Epoch 21 | Batch 10/10 | Loss: 0.9123 | Avg Loss: 0.8647 | GPU Memory: 7181.2MB
+2025-09-10 14:41:30,901 - INFO - Epoch 21 completed. Loss: 0.8756, Time: 4.2s
+2025-09-10 14:42:22,968 - INFO - Validation | Loss: 1.0494, mIoU: 0.7285, IoUs: [0.9872978  0.91051687 0.63772672 0.37835781]
+2025-09-10 14:42:22,969 - INFO - Early stopping triggered after 5 epochs with no improvement.
+2025-09-10 14:42:22,970 - INFO - Training completed
+2025-09-10 14:42:22,970 - INFO - Average Validation Loss: 1.2387 ± 0.3491
+2025-09-10 14:42:22,971 - INFO - Average Validation mIoU: 0.6801 ± 0.0953
+2025-09-10 14:42:22,971 - INFO - Average Per-class IoU: Class 0: 0.9746, Class 1: 0.7937, Class 2: 0.6119, Class 3: 0.3401

@@ -10,6 +10,12 @@ import torch.nn.functional as F
 # from .conv import Conv
 from lib.models.model_zoo.conv import Conv
 from lib.models.model_zoo.modules import ASPP, DACBlock, DACBlock2, AIM
+
+try:
+    from .UAFM import*
+except ImportError:
+    from UAFM import*
+
 # from .modules import ASPP, DACBlock, DACBlock2, AIM
 # from conv import Conv
 # from modules import ASPP, DACBlock, DACBlock2, AIM
@@ -89,17 +95,24 @@ class DecoderBlock(nn.Module):
 
 # ---------------- Segmentation Model ----------------
 class ResNet50UNet(nn.Module):
-    def __init__(self, num_classes=4, pretrained=True, name="ResNet50UNet_AIM"):
+    def __init__(self, num_classes=4, pretrained=True, name="ResNet50UNet_DAC"):
         super().__init__()
         self.name = name
         self.encoder = ResNet50Encoder(pretrained=pretrained)
-        self.aim = AIM(iC_list=(64, 256, 512, 1024, 2048), oC_list=(64, 256, 512, 1024, 2048))
+        self.sppf = SPPF(2048, 2048, k=3)
+        self.aspp = ASPP(2048, 2048)
+        
+        # self.aim = AIM(iC_list=(64, 256, 512, 1024, 2048), oC_list=(64, 256, 512, 1024, 2048))
+        self.dac1 = DACBlock2(256)
+        self.dac2 = DACBlock2(512)
+        self.dac3 = DACBlock2(1024)
+        self.dac4 = DACBlock2(2048)
+
         self.decoder4 = DecoderBlock(6144, 1024, 512) # 2048 from encoder + 1024 skip
         self.decoder3 = DecoderBlock(512, 512, 256)
         self.decoder2 = DecoderBlock(256, 256, 128)
-        self.decoder1 = DecoderBlock(128, 64, 64)
-        self.sppf = SPPF(2048, 2048, k=3)
-        # self.aspp = ASPP(2048,2048)
+        # self.decoder1 = DecoderBlock(128, 64, 64)
+
         self.upconv = nn.ConvTranspose2d(128, 128, kernel_size=2, stride=2)
         self.final_conv = nn.Conv2d(128, num_classes, kernel_size=1)
         # self.convc = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=2, padding=1)
@@ -107,11 +120,13 @@ class ResNet50UNet(nn.Module):
     def forward(self, x):
         p0, p1, p2, p3, p4 = self.encoder(x)
      
-        p0 = F.interpolate(p0, scale_factor=2, mode="bilinear", align_corners=False)
-        l0, l1, l2, l3, l4 = self.aim(p0, p1, p2, p3, p4)
+        # p0 = F.interpolate(p0, scale_factor=2, mode="bilinear", align_corners=False)
+        # l0, l1, l2, l3, l4 = self.aim(p0, p1, p2, p3, p4)
 
-        # print("before AIM shapes:", p0.shape, p1.shape, p2.shape, p3.shape, p4.shape)
-        # print("After AIM shapes:", l0.shape, l1.shape, l2.shape, l3.shape, l4.shape)
+        l1 = self.dac1(p1)
+        l2 = self.dac2(p2)
+        l3 = self.dac3(p3)
+        l4 = self.dac4(p4)
 
         x1 = self.sppf(p4)
         x2 = l4 #self.aspp(p4)
@@ -120,7 +135,7 @@ class ResNet50UNet(nn.Module):
         x = self.decoder4(x, l3)
         x = self.decoder3(x, l2)
         x = self.decoder2(x, l1)
-        
+
         # Optional: skip connection from initial layer (if you want)
         # x = self.decoder1(x, skips_from_initial)
         x = self.upconv(x)
@@ -294,4 +309,5 @@ if __name__ == "__main__":
     # model = UNetDACRMP(in_channels=3, out_channels=2) # for 2-class segmentation
     x = torch.randn(2, 3, 512, 512)  # batch=2, RGB 512x512
     y = model(x)
+    print("Input shape:", x.shape)    # (batch, 3, H, W)
     print("Output shape:", y.shape)  # (batch, num_classes, H, W)
