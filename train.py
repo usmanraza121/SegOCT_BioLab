@@ -16,6 +16,8 @@ import logging
 import datetime
 from lib.models.model_zoo.t_net import tnet
 from lib.models.model_zoo.ResNet50UNet import ResNet50UNet
+from lib.models.UOCNet import UOCNet
+from lib.models.UNET_OCT import UNET_OCT
 from lib.losses import CombinedLoss
 # -----------------------------
 # 1. Logging and Run Folder
@@ -39,7 +41,7 @@ def parse_args():
     parser.add_argument('--data_root', type=str, default="/media/be-light/Data/PG_Gdansk/Torun_secondment/Experiments/dataset/cityscapes", help="Dataset path")
     parser.add_argument('--num_classes', type=int, default=4, help="Number of classes")
     parser.add_argument('--crop_size', type=int, default=256, help="Crop size for images")
-    parser.add_argument('--batch_size', type=int, default=8, help="Training batch size")
+    parser.add_argument('--batch_size', type=int, default=4, help="Training batch size")
     parser.add_argument('--val_batch_size', type=int, default=4, help="Validation batch size")
     parser.add_argument('--num_epochs', type=int, default=25, help="Number of epochs")
     parser.add_argument('--lr', type=float, default=1e-4, help="Learning rate")
@@ -183,7 +185,9 @@ def main():
     # Initialize model, dataloaders, loss, optimizer
     # model = initialize_model(args.num_classes, device, args.resume)
     # model = tnet(classes=args.num_classes, name= "TNet").to(device)
-    model = ResNet50UNet(num_classes=args.num_classes).to(device)
+    # model = ResNet50UNet(num_classes=args.num_classes).to(device)
+    # model = UOCNet(num_classes=4, name='OCNet').to(device)
+    model = UNET_OCT (num_classes=4, name = 'UNET_OCT_AIM').to(device)
     # model.name = getattr(model, "name", None) or getattr(args, "name", "UnnamedModel")
     if getattr(model, "name", None) is not None:
         args.name = model.name
@@ -198,7 +202,7 @@ def main():
                 f"Training {model.name} Model using device: {device}\n"
                 f"Run directory: {run_dir}\n"
                 f"Configuration:\n{json.dumps(vars(args), indent=4)}"
-                f"using class weights: {[1.0, 1.0, 1.0, 3.0]} and gamma: {3.0}\n"
+                f"using class weights: {[1.0, 1.0, 1.0, 3.0]}\n"
                 )
 
 

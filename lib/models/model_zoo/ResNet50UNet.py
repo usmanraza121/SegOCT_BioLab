@@ -103,10 +103,10 @@ class ResNet50UNet(nn.Module):
         self.aspp = ASPP(2048, 2048)
         
         # self.aim = AIM(iC_list=(64, 256, 512, 1024, 2048), oC_list=(64, 256, 512, 1024, 2048))
-        self.dac1 = DACBlock2(256)
-        self.dac2 = DACBlock2(512)
-        self.dac3 = DACBlock2(1024)
-        self.dac4 = DACBlock2(2048)
+        self.dac1 = DACBlock(256)
+        self.dac2 = DACBlock(512)
+        self.dac3 = DACBlock(1024)
+        self.dac4 = DACBlock(2048)
 
         self.decoder4 = DecoderBlock(6144, 1024, 512) # 2048 from encoder + 1024 skip
         self.decoder3 = DecoderBlock(512, 512, 256)
@@ -128,9 +128,9 @@ class ResNet50UNet(nn.Module):
         l3 = self.dac3(p3)
         l4 = self.dac4(p4)
 
-        x1 = self.sppf(p4)
-        x2 = l4 #self.aspp(p4)
-        x = torch.cat([p4, x1, x2], dim=1)
+        x1 = self.sppf(l4)
+        x2 = self.aspp(x1)
+        x = torch.cat([l4, x1, x2], dim=1)
 
         x = self.decoder4(x, l3)
         x = self.decoder3(x, l2)

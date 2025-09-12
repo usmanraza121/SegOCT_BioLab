@@ -1,0 +1,18 @@
+2025-09-11 14:27:20,859 - INFO - Training UNET_OCT_AIM Model using device: cuda
+Run directory: runs/UNET_OCT_AIM_20250911_142720
+Configuration:
+{
+    "name": "UNET_OCT_AIM",
+    "data_root": "/media/be-light/Data/PG_Gdansk/Torun_secondment/Experiments/dataset/cityscapes",
+    "num_classes": 4,
+    "crop_size": 256,
+    "batch_size": 8,
+    "val_batch_size": 4,
+    "num_epochs": 25,
+    "lr": 0.0001,
+    "log_dir": "runs",
+    "resume": null,
+    "early_stop_patience": 5
+}using class weights: [1.0, 1.0, 1.0, 3.0]
+
+2025-09-11 14:27:20,860 - INFO - Training samples: 79, Validation samples: 20

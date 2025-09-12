@@ -1,0 +1,29 @@
+2025-09-11 13:19:58,368 - INFO - Training OCNet Model using device: cuda
+Run directory: runs/OCNet_20250911_131958
+Configuration:
+{
+    "name": "OCNet",
+    "data_root": "/media/be-light/Data/PG_Gdansk/Torun_secondment/Experiments/dataset/cityscapes",
+    "num_classes": 4,
+    "crop_size": 256,
+    "batch_size": 8,
+    "val_batch_size": 4,
+    "num_epochs": 25,
+    "lr": 0.0001,
+    "log_dir": "runs",
+    "resume": null,
+    "early_stop_patience": 5
+}using class weights: [1.0, 1.0, 1.0, 3.0]
+
+2025-09-11 13:19:58,368 - INFO - Training samples: 79, Validation samples: 20
+2025-09-11 13:20:00,525 - INFO - Epoch 1 | Batch 1/10 | Loss: 2.6409 | Avg Loss: 2.6409 | GPU Memory: 514.0MB
+2025-09-11 13:20:00,592 - INFO - Epoch 1 | Batch 2/10 | Loss: 2.4559 | Avg Loss: 2.5484 | GPU Memory: 513.8MB
+2025-09-11 13:20:00,654 - INFO - Epoch 1 | Batch 3/10 | Loss: 2.3352 | Avg Loss: 2.4774 | GPU Memory: 512.3MB
+2025-09-11 13:20:00,717 - INFO - Epoch 1 | Batch 4/10 | Loss: 2.3442 | Avg Loss: 2.4441 | GPU Memory: 514.4MB
+2025-09-11 13:20:00,783 - INFO - Epoch 1 | Batch 5/10 | Loss: 2.2254 | Avg Loss: 2.4003 | GPU Memory: 512.6MB
+2025-09-11 13:20:00,846 - INFO - Epoch 1 | Batch 6/10 | Loss: 2.1882 | Avg Loss: 2.3650 | GPU Memory: 514.1MB
+2025-09-11 13:20:00,909 - INFO - Epoch 1 | Batch 7/10 | Loss: 2.1285 | Avg Loss: 2.3312 | GPU Memory: 514.1MB
+2025-09-11 13:20:00,969 - INFO - Epoch 1 | Batch 8/10 | Loss: 2.1444 | Avg Loss: 2.3078 | GPU Memory: 518.1MB
+2025-09-11 13:20:01,035 - INFO - Epoch 1 | Batch 9/10 | Loss: 2.1215 | Avg Loss: 2.2871 | GPU Memory: 513.6MB
+2025-09-11 13:20:01,919 - INFO - Epoch 1 | Batch 10/10 | Loss: 2.1478 | Avg Loss: 2.2463 | GPU Memory: 514.4MB
+2025-09-11 13:20:02,619 - INFO - Epoch 1 completed. Loss: 2.2748, Time: 4.2s
