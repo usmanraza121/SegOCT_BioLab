@@ -17,6 +17,7 @@ import datetime
 from lib.models.model_zoo.t_net import tnet
 from lib.models.model_zoo.ResNet50UNet import ResNet50UNet
 from lib.models.UOCNet import UOCNet
+from lib.models.UNetOcNet import UNetOcNet
 from lib.models.UNET_OCT import UNET_OCT
 from lib.losses import CombinedLoss
 # -----------------------------
@@ -187,7 +188,8 @@ def main():
     # model = tnet(classes=args.num_classes, name= "TNet").to(device)
     # model = ResNet50UNet(num_classes=args.num_classes).to(device)
     # model = UOCNet(num_classes=4, name='OCNet').to(device)
-    model = UNET_OCT (num_classes=4, name = 'UNET_OCT_AIM').to(device)
+    # model = UNET_OCT (num_classes=4, name = 'UNET_OCT_AIM').to(device)
+    model = UNetOcNet(num_classes=4, name='UNetOcNet').to(device)
     # model.name = getattr(model, "name", None) or getattr(args, "name", "UnnamedModel")
     if getattr(model, "name", None) is not None:
         args.name = model.name

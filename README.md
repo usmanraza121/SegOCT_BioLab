@@ -1,80 +1,128 @@
-# OCT Image Segmentation: Cornea, Lens, and Nucleus
+# RefraSegNet: OCT Image Segmentation Framework for Refraction Correction and Accurate Biometric Measurements of the Eye
 
-This repository provides a pipeline for precise **annotation** and **segmentation of OCT (Optical Coherence Tomography) images** into three key regions: **cornea**, **lens**, and **nucleus**.  
-It combines a custom annotation method for precise boundary detection with a DeepLabV3+ U-Net model for automated segmentation.  
-The approach addresses challenges such as **low image contrast** and **overlapping anatomical regions**, ensuring accurate delineation of structures.
+This is the implementation of the RefraSegNet framework.
 
-![Annotation comparison](images/anno.png)
+## Overview
 
----
+This repository presents **RefraSegNet**, a refractive-aware deep learning framework for **annotation, segmentation, and biometric analysis** of anterior segment OCT (AS-OCT) images.
+
+The pipeline performs:
+
+- Precise **pixel-level segmentation** of the **cornea**, **lens**, and **lens nucleus**
+- **Refraction correction** using physics-based ray tracing
+- Extraction of **clinically relevant biometric measurements**
+
+The framework is designed to handle challenges such as:
+
+- Low image contrast
+- Speckle noise
+- Shadow artifacts
+- Overlapping anatomical structures
+
+## Graphical Abstract
+The abstract representation of the proposed RefraSegNet framework is shown below.
+
+![Graphical Abstract](images/abstract.png)
+
+## Key Features
+
+- Custom pipeline for data annotation and preprocessing for anterior segment structures
+- End-to-end pipeline from AS-OCT image segmentation to refraction-corrected biometric analysis
+- Multi-class segmentation of cornea, lens, and lens nucleus
+- Refractive-aware geometric correction using ray tracing
+- Quantitative biometric measurement of thickness and curvature
+- Fuzzy-label generation and training strategy
 
 ## Annotation Pipeline
+### 1. CVAT Annotation
 
-### CVAT for Annotation ([CVAT](https://www.cvat.ai/))
-- Initial annotations were generated using CVAT.  
-- Limitations: **low contrast**, **overlapping lens/nucleus regions**, and **imprecise boundaries**.
+Initial annotations were generated using [CVAT](https://www.cvat.ai/).
 
-### Custom Annotation Tool (LabVIEW Frequency Profiling)
-- OCT intensity images were processed in **LabVIEW** to extract **high- and low-frequency vertical profiles**.
-- Vertical profiles were analyzed to detect **boundary regions** between anatomical layers.
-- A **Python script** post-processed the profiles to identify **start and end points** for each segment:
-  - Segments **2 & 3** → **Cornea**  
-  - Segments **4 & 7** → **Lens**  
-  - Segments **5 & 6** → **Nucleus**
-- This method produces **precise and accurate annotations**, outperforming manual CVAT labeling.
+**Limitations:**
+
+- Low contrast boundaries
+- Overlapping lens and nucleus regions
+- Inconsistent manual labeling
+
+
+### 2. Custom Annotation (LabVIEW Frequency Profiling)
+
+To improve annotation quality:
+
+- OCT intensity images are processed in LabVIEW
+- High- and low-frequency vertical intensity profiles are extracted
+- Boundary regions are detected using frequency transitions
+- A Python post-processing script identifies segment boundaries
+
+This approach significantly improves annotation precision compared to manual labeling. This annotation pipeline is shown in the image below.
 
 ![Annotation profiling](images/anno1.png)
 
----
+Image below represents the OCT image and corresponding labeled images using CVAT annotation, custom label technique, and fuzzy-label method.
+![Annotation comparison](images/anno.png)
 
-## Model Training
-A DeepLabV3+ U-Net model was trained on the **custom-annotated dataset** to segment OCT images into cornea, lens, and nucleus.
+## Dataset Availability
 
-- **Input:** OCT images  
-- **Output:** Segmentation masks (cornea, lens, nucleus)  
-- **Architecture:** DeepLabV3+ with U-Net backbone for robust feature extraction and boundary prediction  
-- **Data loading:** Custom PyTorch dataloader for preprocessing and training  
+- Data is available on request
 
-To train the model:
-```bash
-python train.py # configure paths, batch size, etc. in train.py
-```
-For k-fold cross-validation:
-```bash
-python train_kfold.py 
-```
-
-## Inference
-Segment new OCT images using the pre-trained model:
-```bash
-python segment_oct.py 
-```
----
 ## Installation
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/SegOCT_BioLab.git
-   cd SegOCT_BioLab
-   ```
+### Option 1: Conda environment from YAML
 
-2. **Set Up Virtual Environment**:
-   ```bash
-   conda create -n octseg 
-   conda activate octseg
-   ```
+```bash
+conda env create -f octseg.yml
+conda activate octseg
+```
 
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Option 2: Manual environment setup
 
----
-   ## Results
-- **Visual Results**: Examples below show segmentation across different subjects.
+```bash
+conda create -n octseg python=3.10 -y
+conda activate octseg
+pip install -r requirements.txt
+```
 
-| Subject | Segmentation Result |
-|---------|--------------------|
-| Subject 1 | ![Result 1](images/img1.jpg) |
-| Subject 2 | ![Result 2](images/img2.jpg) |
-| Subject 3 | ![Result 3](images/img3.jpg) |
+## Training
+
+Run default training:
+
+```bash
+python train.py
+```
+
+Run k-fold training:
+
+```bash
+python train_kfold.py
+```
+
+## Example Results
+
+Segmentation results on representative AS-OCT scans:
+
+![Result 1](images/img1.png)
+
+Example under partial occlusion (eyelashes/shadow artifacts):
+
+![Result 2](images/img2.png)
+
+## Citation
+
+If you use this code in your research, please cite the RefraSegNet paper:
+
+```bibtex
+@article{refrasegnet2026,
+  title   = {RefraSegNet: OCT Image Segmentation Framework for Refraction Correction and Accurate Biometric Measurements of the Eye},
+  author  = {Muhammad Usman, Keerthana Soman, Majad Mansoor, Ireneusz Grulkowski, Jacek RUMIŃSKI},
+  journal = {under review},
+  year    = {2026}
+}
+```
+
+## Contact
+
+For questions, collaboration, or data/model access requests:
+- Muhammad Usman
+- E-mail: [muhammad.usman1@pg.edu.pl](mailto:muhammad.usman1@pg.edu.pl)
+- Gdansk University of Technology, FETI, Department of Biomedical Engineering, Gdansk, 80-233, Poland
+
