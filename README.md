@@ -56,10 +56,12 @@ To improve annotation quality:
 
 This approach significantly improves annotation precision compared to manual labeling. This annotation pipeline is shown in the image below.
 
-![Annotation profiling](images/anno1.png)
+<!-- ![Annotation profiling](images/anno1.png) -->
+<img src="images/anno1.png" alt="Annotation profiling" width="100%">
 
 Image below represents the OCT image and corresponding labeled images using CVAT annotation, custom label technique, and fuzzy-label method.
-![Annotation comparison](images/anno.png)
+<!-- ![Annotation comparison](images/anno.png) -->
+<img src="images/anno.png" alt="Annotation comparison" width="70%">
 
 ## Dataset Availability
 
@@ -104,7 +106,8 @@ Segmentation results on representative AS-OCT scans:
 
 Example under partial occlusion (eyelashes/shadow artifacts):
 
-![Result 2](images/img2.png)
+<!-- ![Result 2](images/img2.png) -->
+<img src="images/img2.png" alt="Result 2" width="70%">
 
 ## Citation
 
