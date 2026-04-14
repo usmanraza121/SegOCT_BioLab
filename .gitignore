@@ -27,7 +27,9 @@ env/
 *.ckpt
 
 # Ignore experiment results and logs
-
+# Experiment outputs
+runs/**
+!runs/.gitkeep
 
 # Ignore OS / IDE files
 .DS_Store
